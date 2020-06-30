@@ -1,0 +1,58 @@
+@charset "ISO-8859-1";
+.adminheader{
+	height: 7%;
+	background-color: #e6e6e6;
+	color: black;
+	font-weight: 600;
+	line-height: 2.5;
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.adminsidebar{
+	height: 83%;
+	border-right: 1px #cfcfcf solid;
+	padding-left: 0!important;
+}
+.adminnav {
+	list-style: none;
+	font-size: 14px;
+	color: #3b73af;
+	line-height: 29px;
+	padding: 7px 0px;
+	word-wrap: break-word;
+	font-weight: normal;
+	text-transform: none;
+}
+.adminnav li:hover {
+	color: #02075D;
+	background-color: #e6e6e6;
+	border-radius: 0em;
+}
+.adminnav li:active {
+	color: #02075D;
+	background-color: #e6e6e6;
+	border-radius: 0em;
+}
+.adminnav li>a {
+	text-decoration: none;
+}
+
+.adminnav li>a {
+	padding: 0px 0px 0px 10px !important;
+}
+.adminnav>li.active>a, .adminnav>li.active>a:focus,
+	.adminnav>li.active>a:hover {
+	color: #02075D;
+	background-color: #e6e6e6;
+	border-radius: 0em;
+}
+.adminnav>li>a:hover, .adminnav>li>a:hover {
+	background-color: #e6e6e6;
+	border-radius: 0em;
+}
+.admintoolbar {
+	background: #fff!important;
+}
+.admindatatable{
+	margin-left: 6px!important;
+}

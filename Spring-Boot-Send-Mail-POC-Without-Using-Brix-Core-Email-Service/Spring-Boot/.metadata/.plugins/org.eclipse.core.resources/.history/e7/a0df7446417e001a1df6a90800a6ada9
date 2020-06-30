@@ -1,0 +1,105 @@
+package com.send.email;
+
+import java.util.Properties;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
+import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+
+public class JavaMailSenderService {
+	@Value("${spring.mail.host}")
+	static String host;
+	
+	@Value("${spring.mail.username}")
+	static String username;
+	
+	@Value("${spring.mail.password}")
+	static String password;
+	
+	@Value("${spring.mail.port}")
+	static int port;
+	
+	@Value("${spring.mail.properties.mail.protocol}")
+	static String protocol;
+	
+	@Value("${spring.mail.properties.mail.tls}")
+	static String tls;
+	
+	@Value("${spring.mail.properties.mail.smtp.auth}")
+	static String auth;
+	
+	@Value("${spring.mail.properties.mail.smtp.starttls.enable}")
+	static String startttls;
+	
+	@Value("${spring.mail.properties.mail.smtp.ssl.trust}")
+	static String ssltrust;
+	
+	static JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
+	
+	@Bean
+	public static String getHost() {
+		return host;
+	}
+
+	@Bean
+	public static String getUsername() {
+		return username;
+	}
+
+	@Bean
+	public static String getPassword() {
+		return password;
+	}
+
+	@Bean
+	public static int getPort() {
+		return port;
+	}
+
+	@Bean
+	public static String getProtocol() {
+		return protocol;
+	}
+
+	@Bean
+	public static String getTls() {
+		return tls;
+	}
+
+	@Bean
+	public static String getAuth() {
+		return auth;
+	}
+
+	@Bean
+	public static String getStartttls() {
+		return startttls;
+	}
+
+	@Bean
+	public static String getSsltrust() {
+		return ssltrust;
+	}
+	
+	public static JavaMailSender getJavaMailSender(){
+		javaMailSender.setHost(getHost());
+		javaMailSender.setPort(getPort());
+		javaMailSender.setPassword(getPassword());
+		javaMailSender.setUsername(getUsername());
+		javaMailSender.setProtocol(getProtocol());
+		System.out.println(tls);
+		Properties javaMailProperties = new Properties();
+		javaMailProperties.put("spring.mail.properties.mail.tls", getTls());
+		javaMailProperties.put("spring.mail.properties.mail.smtp.auth", getAuth());
+		javaMailProperties.put("spring.mail.properties.mail.smtp.starttls.enable", getStartttls());
+		javaMailProperties.put("{spring.mail.properties.mail.smtp.ssl.trust", getSsltrust());
+		
+		javaMailSender.setJavaMailProperties(javaMailProperties);
+		
+		return javaMailSender;
+	}
+	
+
+
+	
+}

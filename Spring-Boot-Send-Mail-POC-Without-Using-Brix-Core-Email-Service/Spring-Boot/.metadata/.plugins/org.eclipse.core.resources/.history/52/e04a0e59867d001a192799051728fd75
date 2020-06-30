@@ -1,0 +1,20 @@
+package com.pojo.classes;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class EmailConfiguration {
+	@Value("${spring.mail.host}")
+	String host;
+
+	@Value("${spring.mail.username}")
+	String username;
+	
+	@Value("${spring.mail.password}")
+	String password;
+	
+	@Value("${spring.mail.port}")
+	String port;
+	
+	@Value("${spring.mail.properties.mail.protocol}")
+	String protocol;
+}

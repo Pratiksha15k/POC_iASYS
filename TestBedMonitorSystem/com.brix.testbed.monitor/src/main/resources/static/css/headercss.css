@@ -1,0 +1,1110 @@
+@CHARSET "ISO-8859-1";
+::-ms-clear {
+	display: none;
+}
+html,
+body {
+	margin: 0px!important;
+	overflow: hidden;
+	height: 100%
+}
+.modelConsole,
+#superUseroginPage,
+#config,
+.config {
+	height: 100%!important;
+	width: 100%!important;
+}
+#modelConsole {
+	height: 100%!important;
+}
+/* NAVBAR */
+
+.a1 img {
+	width: 100px!important;
+}
+.a1 {
+	border-width: 0px!important;
+}
+.adminnav {
+	height: 38px!important
+}
+
+.navBarCss {
+	width: 100%;
+	background: #205081!important;
+	/* 	height: 46px!important; */
+}
+.logoCss {
+	background: #205081!important;
+	color: #fff;
+}
+.logoCss img {
+	height: 52%!important;
+	padding-left: 12px!important;
+	margin-top: 9px;
+	background: #205081!important;
+}
+.titlelogo {
+	font-size: 20px!important;
+	font-weight: 900;
+	color: #cc6b2a!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+}
+.titltcss {
+	color: #fff!important;
+	font-size: 19px!important;
+	font-weight: 900;
+	background: #205081!important;
+	/* 	padding:3px!important; */
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+}
+.navRightCss {
+	color: white;
+	font-weight: bold;
+	font-size: large;
+	padding-top: 5px;
+	margin: 0px;
+	right: auto;
+	top: 9px;
+	left: 14px;
+	background: #205081!important;
+	text-align: right;
+	border-color: #393d40;
+}
+.btnCss {
+	font-weight: bold;
+	font-size: large;
+	padding-top: 5px;
+	margin: 0px;
+	right: auto;
+	top: 9px;
+	left: 14px;
+	background: #205081!important;
+	border-color: #393d40;
+	text-align: right;
+	padding-left: 13px;
+	padding-top: 0px;
+}
+
+.btnCss .webix_icon_btn.fa-fas.fa-info-circle,
+.userCss .webix_icon_btn {
+	color: white;
+}
+.userCss :FOCUS {
+	background: #4b7096!important;
+}
+.navRightCss {
+	color: white;
+	font-weight: bold;
+	right: auto;
+	top: 7px;
+	margin: 0px;
+	left: 33px;
+	font-family: 'Meiryo UI', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+}
+#view {
+	height: 100%!important;
+}
+
+#instanceView,
+#appView,
+#baseModel {
+	height: 100%!important;
+	/*
+	width: 100%!important; */
+}
+.uiView {
+	/* width: 100%!important;
+	height: 100%!important; */
+	margin-top: 1px!important;
+	border-width: 0px!important
+}
+
+/* .webix_el_search input {
+	border-radius: 0px!important;
+} */
+
+.instance_view_detailsCss,
+.instance_view_tree_containerCss {
+	background: white!important;
+	/* height: 100%!important;
+	width:82%!important; */
+}
+#routingContainer {
+	height: 100%!important;
+	/*  width: 100%; */
+}
+.webix_img_btn,
+.webix_img_btn_abs {
+	text-align: center;
+}
+.create_instanceCss.brix_popup.webix_view .webix_win_head>.webix_view>.webix_template {
+	background: #205081!important;
+	box-shadow: none!important;
+	font-size: 12px;
+	font-weight: bold!important;
+	line-height: 1.666666666667;
+	padding-top: 4px!important;
+}
+.create_instanceCss.brix_popup .create_instance_popup_title_css {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #fff!important;
+	font-size: 14px!important;
+}
+.create_instance_popup_title_css {
+	display: block;
+	width: 91%;
+	float: left;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.create_instanceCss.brix_popup.webix_window {
+	border-radius: 6px!important;
+	background: #f5f5f5;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	box-shadow: 0px 2px 8px 4px #888888;
+}
+.closeicon {
+	float: right;
+	font-weight: bold;
+	right: 16px;
+	position: relative;
+	font-size: 20px;
+	cursor: pointer;
+	margin-top: -5px;
+	color: #fff;
+}
+
+/* PAGER */
+
+#pager {
+	height: 100%!important;
+	width: 100%!important;
+}
+
+.pagercss {
+	height: 100%!important;
+	/* background: #393d40!important; */
+}
+
+
+/* .webix_view .webix_pager_item {
+	background: #97999b!important;
+	border: #97999b!important;
+	border-bottom: #97999b!important;
+	color: #656768!important;
+	margin-top: 4px!important;
+	margin-bottom: 3px!important;
+	border-radius: 0px!important;
+	padding: 4px!!important;
+	height: 34px!important;
+} */
+
+
+/* .webix_pager_item_selected {
+	background: white!important;
+	color: #333!important;
+	border: #97999b!important;
+	;
+	border-bottom: #97999b!important;
+	margin-top: 4px!important;
+	margin-bottom: 3px!important;
+	border-radius: 0px!important;
+	padding: 4px!!important;
+	height: 34px!important;
+} */
+
+.paging_text {
+	text-align: center;
+	/* color: #333!important; */
+	font: 300 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+	padding: 4px!!important;
+	line-height: 22px;
+}
+
+.panel_paging_text {
+	/* text-align: center;
+	color: #333!important; */
+	font: 300 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+	padding: 4px!!important;
+	line-height: 22px;
+}
+
+
+/* .webix_pager_item_selected {
+	height: 34px!important;
+	background: white!important;
+	color: #333!important;
+	border: #97999b!important;
+	;
+	border-bottom: #97999b!important;
+	margin-top: 4px!important;
+	margin-bottom: 3px!important;
+	border-radius: 0px!important;
+	padding: 4px!!important;
+}
+.webix_view .webix_pager_item {
+	height: 34px!important;
+	background: #97999b!important;
+	border: #97999b!important;
+	border-bottom: #97999b!important;
+	color: #656768!important;
+	margin-top: 4px!important;
+	margin-bottom: 3px!important;
+	border-radius: 0px!important;
+	padding: 4px!!important;
+} */
+
+.gridContainer {
+	/* border: 1px solid #ddd!important; */
+	border-left: 3px solid #ddd!important;
+}
+.sideBarCss a {
+	color: #333!important;
+	text-decoration: none!important;
+}
+.webix_sidebar .webix_tree_item.webix_selected,
+.webix_sidebar .webix_tree_item.webix_selected span {
+	background: transparent!important;
+}
+.sideBarCss .webix_tree_item.webix_selected span {
+	color: #333!important;
+}
+.side {
+	margin-top: 1px!important;
+	margin-right: 1px!important;
+}
+.userIconCss {
+	text-align: center!important;
+	color: #333!important;
+	height: 60%!important;
+	border: 0px!important;
+}
+.logoutBtnCss .webix_img_btn {
+	color: #00BCD4;
+	font-size: 15px;
+	background: #000;
+	font: 650 13px/16px 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+	font-size: large;
+	font: bold;
+}
+
+.logoutBtnCss .webix_icon_btn {
+	color: #00BCD4;
+}
+
+.logoutBtnCss {
+	height: 27%!important;
+}
+
+.fa-5x {
+	font-size: 7em!important;
+}
+
+.webix_resizer:FOCUS {
+	outline-color: #8c8c8c;
+	outline-style: dotted;
+	outline-width:
+}
+
+
+/* .header {
+	font-size: 18px!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333 !important;
+	  padding-top: 1.5%;
+} */
+
+.headLink span:HOVER {
+	color: purple!important;
+}
+.headLink a {
+	color: blue!important;
+	text-decoration: underline!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.create_instance_popup.webix_window {
+	border-radius: 6px!important;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	box-shadow: 0px 2px 8px 4px #888888;
+}
+
+.labelCss .webix_el_box input,
+.labelCss div {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333!important;
+	font-size: 12px!important;
+	font-weight: bold;
+	/* padding: 0px!important; */
+	border: none!important;
+}
+
+.checkCss .webix_el_box {
+	padding-left: 40%!important;
+}
+
+.webix_point_top {
+	position: relative!important;
+}
+
+.webix_sidebar_popup_title.webix_selected {
+	background: white!important;
+	border-left-color: white!important;
+}
+
+a {
+	color: #333!important;
+	text-decoration: none!important;
+}
+
+.accordianCss .webix_view.webix_accordionitem.vertical {
+	margin-top: 0px!important;
+}
+
+.formCss {
+	border-width: 0px!important;
+	/* height: 90%!important; */
+}
+
+.webix_popup_button.confirm div {
+	background: #f5f5f5;
+	color: #333;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	border-radius: 3.01px;
+	line-height: 1.7999999!important;
+	white-space: nowrap;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.leftlabelCss {}
+
+.webix_modal_box .webix_popup_title {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #fff!important;
+	font-size: 15px!important;
+	background: #205081!important;
+	box-shadow: none!important;
+	font-weight: bold!important;
+	line-height: 2.666666666667;
+	padding-top: 4px!important;
+	border-top-left-radius: 6px!important;
+	border-top-right-radius: 6px!important;
+}
+
+.webix_popup_text {
+	margin-right: 11px!important;
+	/*  word-break: break-all; */
+	margin-left: 10px!important;
+	box-shadow: none!important;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333;
+}
+
+.webix_inp_static {
+	width: 95%!important
+}
+
+.tempCss {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333!important;
+	font-size: 15px!important;
+	font-weight: bold;
+	padding: 0px!important;
+	border: none!important;
+	text-align: center;
+	border-width: 0px!important;
+}
+
+.listContainer {
+	height: 96%!important;
+}
+
+.leftLabelCss {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333!important;
+	font-size: 15px!important;
+	padding: 0px!important;
+	border: none!important;
+	text-align: center;
+	border-width: 0px!important;
+}
+
+.textcss .webix_el_box input {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333!important;
+	font-size: 15px!important;
+	text-align: center;
+}
+
+.dbllistCss {
+	padding-top: 12%!important;
+}
+
+.relLableCss {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333!important;
+	font-size: 15px!important;
+	/* padding: 0px!important; */
+	border: none!important;
+	padding-left: 2%;
+	/* text-align: center; */
+	border-width: 0px!important;
+}
+
+.leftLabelCss .webix_template {
+	text-align: -webkit-auto!important;
+}
+
+.formbtnCss .webix_el_box {
+	margin-left: 15%!important;
+}
+
+.delTextCss {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333!important;
+	font-size: 15px!important;
+	padding: 0px!important;
+	border: none!important;
+	text-align: center;
+}
+
+.delTextCss .webix_template {
+	padding-top: 8%!important;
+}
+
+.treeContainerCss .webix_view.webix_tree {
+	height: 91%!important;
+}
+
+.configCss {
+	height: 100%!important;
+	/* 
+	width: 100%!important; */
+}
+
+.refreshBtnCSS .webix_el_box .webix_img_btn {
+	border: 0px!important;
+}
+
+
+/* toggle */
+
+.access_tgl .webix_icon_btn.fa-fas.fa-toggle-on {
+	/* color: #44A5FF; */
+	color: green;
+	/*  text-shadow: 1px 1px 1px #ccc; */
+	border: none!important;
+	border-radius: 60px;
+	box-sizing: border-box;
+	font-size: 1.5em;
+}
+
+.access_tgl .webix_icon_btn.fa-fas.fa-toggle-off {
+	/* background-color: #f1f1f1; */
+	border: none!important;
+	border-radius: 60px;
+	box-sizing: border-box;
+	transition: background-color .1s ease;
+	color: #333;
+	text-shadow: 1px 1px 1px #333;
+	font-size: 1.5em;
+}
+
+.access_tgl .webix_img_btn {
+	border: none!important;
+}
+
+.access_tgl .webix_el_box {
+	width: 36px!important;
+}
+
+.access_tgl.webix_icon_btn.fa-fas.fa-toggle-on {
+	border: none!important;
+}
+
+.access_tgl.webix_icon_btn.fa-fas.fa-toggle-off {
+	border: none!important;
+}
+
+.popupHead {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	font-size: 18px!important;
+	color: #333;
+}
+
+.instbtnContainer {
+	/* height:8%!important; */
+}
+
+#instanceroutingContainer {
+	height: 100%!important;
+	/* width: 100%!important; */
+}
+
+.nameServiceCss {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	font-size: 14px!important;
+	font-weight: 700!important;
+	/* line-height:2%!important; */
+	color: black;
+	border: none!important;
+}
+
+.removeBorderCss.webix_el_text input {
+	border: 0px!important;
+	text-align: center!important;
+}
+
+.nameServiceCss .webix_template {
+	/* padding-top: 4%!important; */
+	word-break: break-all;
+	text-align: -webkit-auto!important;
+	text-align: center!important;
+}
+
+.lobiheader .panel-heading {
+	height: 34px!impportant;
+}
+
+.lobiheader {
+	background: #3B73AF!important;
+	color: white!important;
+	font-weight: 500!important;
+	line-height: 30px!important;
+	padding-left: 5px!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	border-radius: 6px!important;
+}
+
+.lobiheader .fa {
+	color: white!important;
+}
+
+.logoutBtnCss .webix_el_box {
+	float: right!important;
+}
+
+.logoutBtnCss .webixtype_base {
+	color: white!important;
+	background: #0084F2!important;
+	font-weight: bold;
+}
+
+.logoutBtnCss .webixtype_base:HOVER {
+	background: blue!important;
+}
+
+.relGrid {
+	margin-left: 50px!important;
+}
+
+.popBtnCss {
+	padding-left: 30%!important;
+}
+
+.delBtnCss {
+/* 	padding-left: 10%!important; */
+}
+
+.popBtnCss .webixtype_base,
+.delBtnCss .webixtype_base {
+	color: white!important;
+	background: #205081!important;
+	font-weight: bold;
+}
+
+.session_Out_PopupCss.brix_popup.webix_view.webix_window {
+	border-radius: 6px!important;
+	margin-top: 29px!important;
+	-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5)!important;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .5)!important;
+}
+
+.session_Out_PopupCss.brix_popup.webix_view .webix_win_head>.webix_view>.webix_template {
+	color: black!important;
+	font-family: !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	font-size: 18px!important;
+	font: bold!imporatnt;
+	box-shadow: none!important;
+}
+
+.webix_modal {
+	opacity: 0.5!important;
+}
+
+.panel_config,
+.config {
+	height: 100%!important;
+	width: 100%!important;
+}
+
+#ngPanel {
+	height: 100%!important;
+	/* 	overflow: hidden!important; */
+}
+
+.graphDataCss {
+	height: 51%!important
+}
+
+#chart_Container {
+	height: 50%important;
+	width: 50%!important;
+}
+
+#graph_Container {
+	height: 50%important;
+	width: 50%!important;
+}
+
+.canvasjs-chart-canvas,
+.graphDataCss .webix_ss_center_scroll {
+	width: 100%!important;
+}
+
+.pagerscrollCss {
+	overflow-y: hidden!important;
+}
+
+.loginCss .webixtype_form {
+	border-radius: 25px!important;
+	background-color: #CC6B2A!important;
+	color: white!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	font-size: 18px!important;
+	font-weight: bold!imporatnt;
+	border-color: #f0fff6!important;
+	border-bottom: 1px solid #ffffff!important;
+}
+
+.canvasjs-chart-credit {
+	display: none!important;
+}
+
+.componentCss.webix_layout_line.webix_view {
+	height: 50px!important
+}
+
+.adjustHeightCss {
+	/* height: 100%!important; */
+	margin-top: 2px!important
+}
+
+.leftColcss {
+	height: 100%!important;
+}
+
+.adjustBorder {
+	border-width: 2px!important;
+	border-top: none;
+	border-color: #CCCCCC!important;
+}
+
+.headingCss {
+	/*center align css for IE & all  */
+	text-align: center!important;
+	/*default*/
+	margin: 0 auto;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	font-size: 14px!important;
+	font-weight: bold!imporatnt;
+	color: black;
+	padding: 7px!important;
+	font-weight: 700;
+}
+
+.listHeadCss {
+	border-width: 2px!important;
+	/* border-top: none; */
+	border-left: none;
+	border-color: #CCCCCC!important;
+}
+
+.listCss .webix_list_item {
+	/* text-align: -webkit-center!important; */
+	text-align: center!important;
+	/*default*/
+	margin: 0 auto;
+}
+
+.adminHeadCss span {
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+	font-size: 1.5em!important;
+}
+
+.adminHeadCss {
+	padding: 10px;
+	border-color: #9E9E9E!important;
+	border-left: none!important;
+}
+
+.graph_Containercss {
+	text-overflow: ellipsis!important;
+}
+
+.graph_Containercss,
+.pagerContainercss {
+	text-align: center!important;
+	/*default*/
+	margin: 0 auto;
+}
+
+.panel-body {
+	padding-top: 0px!important
+}
+
+.webix_message_area {
+	top: 50% !important;
+	/* bottom: 50%!important; */
+	left: 45%!important;
+}
+
+.webix_info div {
+	background: red;
+}
+
+.tabCss .webix_item_tab {
+	width: 150px!important;
+}
+
+.menu,
+.webix_form.menu {
+	background: #ECEFF1;
+}
+
+.app_button button {
+	padding: 0;
+	text-align: center;
+}
+
+.textOverCss .webix_list_item {
+	text-overflow: ellipsis!important;
+}
+
+.panelCss {
+	height: 100%!important;
+}
+
+.gridCss .webix_column {
+	width: 100%!important;
+	/* 	height: 100%!important; */
+}
+.gridCss .webix_column div{
+	width: 80%!important;
+}
+.gridCss .webix_ss_center_scroll {
+	position: static!important;
+}
+
+.tooltipcss {
+	word-wrap: break-word!important;
+	max-width: 400px!important;
+	-ms-word-wrap: break-word!important;
+}
+
+.menu .webix_icon_btn {
+	font-size: 25px!important;
+}
+
+.comboCss.webix_view.webix_control.webix_el_combo,
+.comboCss.webix_view.webix_control.webix_el_combo input {
+	width: 100%!important;
+}
+
+.comboCss .webix_el_box {
+	width: 100%!important;
+}
+
+.userNameCss .webix_template {
+	/*   font-weight: 700!important; */
+	font-size: 16px!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+}
+
+.webix_el_search input {
+	font-size: 14px!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333 !important;
+}
+
+.webix_view.webix_tree.tree_style.custom_tree_style {
+	/*  margin-top: 7px!important; */
+	border-color: ada8a8;
+/* 	border-width: 2px!important; */
+}
+
+.webix_view.webix_resizer.webix_resizer_x {
+	/* margin: 2px!important */
+}
+
+.accGrid .webix_cell,
+.gridCss .webix_cell {
+	border: none;
+}
+
+. .webix_cell.webix_row_select {
+	background: #fff !important
+}
+
+.titltcss .webix_template,
+.userNameCss .webix_template {
+	text-align: -webkit-auto!important;
+}
+
+.instFilterCss .webix_el_box input {
+	font-size: 14px!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333 !important;
+}
+
+.formlabelcss.webix_view {
+	border: 0px!important
+}
+
+.changPwdCss .webixtype_base {
+	background: #f5f5f5!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 14px!important;
+	border: 0px solid #ccc!important;
+	color: #4d2bfb!important;
+	border-radius: 3.01px!important;
+}
+
+.changPwdCss .webixtype_base:ACTIVE {
+	box-shadow: none!important;
+}
+
+.adminNamecss.webix_view {
+	padding-top: 6px!important;
+	border-width: 0px!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 14px!important;
+	font-weight: 700!important;
+}
+
+.btnContainerCss {
+	margin-top: 28%!important;
+}
+
+.adminCss .webix_template {
+	font-size: x-large;
+	color: #d63d0c;
+	font-weight: 700;
+	cursor: pointer;
+	text-align: center;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.metaDataCss {
+	color: #4A4A4A!important;
+	margin-right: 10px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	font-size: 14px!important;
+	padding: 3px;
+	font-weight: bold!important;
+}
+
+.webix_tooltip {
+	color: #333!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px!important;
+}
+
+.versionTextCss .webix_view {
+	border-width: 0px!important;
+}
+
+.versionTextCss {
+	text-align: center!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: black!important;
+	font-size: 14px!important;
+	padding-top: 15px!important;
+}
+
+.uiView {
+	width: 98%!important;
+}
+
+.expandViewCss {
+/* 	margin-right: 10.2%!important; */
+margin-right: 9%!important;
+}
+
+.dbllistcss {
+	margin-top: 1.5px!important;
+}
+
+
+/* .tree_style{
+	width: 17%!important;
+} */
+
+.saveBtnCss {
+	margin-top: 90%!important;
+}
+
+.arrowBtnCss .webix_img_btn {
+	background: #eef7fc!important;
+}
+
+.arrowBtnCss .webix_icon_btn {
+	color: black!important;
+}
+
+.formCss .webix_scroll_cont {
+	padding-bottom: 17px!important;
+}
+
+.webix_view.webix_list.brix-form.textOverCss {
+	border: 1px solid #C1C1C1!important;
+	margin-left: 0px!important;
+}
+
+.param {
+	float: left;
+}
+
+.value {
+	float: right;
+	text-overflow: ellipsis!important;
+	word-break: break-all;
+}
+
+.value,
+.param {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: black!important;
+	font-size: 13px!important
+}
+
+.dot {
+	float: inherit;
+}
+
+#asamP {
+	color: red!important
+}
+
+#instance_attribute_atrname_grid,
+#instance_attribute_parameter_grid {
+	margin-left: 53px;
+	margin-right: 53px;
+}
+
+.adminloginBtn,
+.uploadListCss {
+	width: 300px!important;
+}
+
+.uploadListCss {
+	border: 1.3px dashed #0087F7!important;
+	border-radius: 5px!important;
+	background: white!important;
+}
+
+.linkcss {
+	color: #337ab7!important;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.fa-cloud-upload {
+	color: #337ab7!important;
+}
+
+.uploaddropcss {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	line-height: 1.42857143!important;
+	color: #333!important;
+	font-size: 15px!important;
+}
+
+.removeBorderCss input {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: black;
+}
+.configWinCss{
+	border-width: 0px!important;
+}
+.configWinCss .webix_list_item{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	color: #333!important;
+	font-size: 13px!important;
+	border-width: 0px!important;
+}
+.configWinCss .webix_list_item:HOVER {
+	background: #205081!important;
+	color: white!important;
+}
+.configWinCss .webix_list{
+border-width: 0px!important;	
+}
+.configWinCss{
+	width:150px!important
+}
+
+.configPopupCss .webix_win_content{
+	padding: 0px!important
+}
+.formbtnContainerCss{
+	height: 500px!important;
+	    margin-left: 26%!important
+}
+.delBtnContainerCss{
+	margin-left: 27%!important
+}
+  .vmModeBtnCss .webix_icon_btn.fa-fas.fa-toggle-on {
+	/* color: #44A5FF; */
+	color: #3498DB;
+	/*  text-shadow: 1px 1px 1px #ccc; */
+	text-shadow: 0px 0px 0px white!important;
+	border: none!important;
+	border-radius: 60px;
+	box-sizing: border-box;
+	font-size: 2.1em;
+}
+.vmModeBtnCss .webix_pressed .webix_img_btn{
+	box-shadow:none!important;
+	background-color:transparent!important;
+	}
+.vmModeBtnCss .webix_icon_btn.fa-fas.fa-toggle-off {
+	/* background-color: #f1f1f1; */
+	border: none!important;
+	border-radius: 60px;
+	box-sizing: border-box;
+	transition: background-color .1s ease;
+	color: #333;
+	text-shadow: 0px 0px 0px white!important;
+	font-size: 2.1em;
+}
+
+.vmModeBtnCss .webix_img_btn {
+	border: none!important;
+	background-color:transparent!important;
+}
+
+
+.vmModeBtnCss.webix_icon_btn.fa-fas.fa-toggle-on {
+	border: none!important;
+}
+
+.vmModeBtnCss.webix_icon_btn.fa-fas.fa-toggle-off {
+	border: none!important;
+}
+.noborder{
+	border-width: 0px!important;
+}

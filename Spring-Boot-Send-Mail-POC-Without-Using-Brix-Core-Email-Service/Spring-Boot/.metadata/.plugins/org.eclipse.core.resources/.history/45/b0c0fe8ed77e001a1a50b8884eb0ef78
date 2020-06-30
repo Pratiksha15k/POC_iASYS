@@ -1,0 +1,13 @@
+package com.send.email;
+
+public class JavaMailSender {
+	String host;
+	String username;
+	String password;
+	int port;
+	String protocol;
+	String tls;
+	String auth;
+	String startttls;
+	String ssltrust;
+}

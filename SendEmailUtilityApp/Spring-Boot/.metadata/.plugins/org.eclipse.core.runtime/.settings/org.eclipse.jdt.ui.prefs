@@ -1,0 +1,22 @@
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.recommenders.calls.rcp.proposalCategory.templates\u0000org.eclipse.mylyn.java.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.recommenders.chain.rcp.proposalCategory.chain\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="org.springframework.mail.MailSender"><rhs name\="com.send.email.JavaMailSenderService"/><rhs name\="org.springframework.mail.javamail.JavaMailSenderImpl"/></lhs><lhs name\="org.springframework.mail.javamail.JavaMailSender"><rhs name\="com.send.email.JavaMailSenderService"/><rhs name\="org.springframework.mail.javamail.JavaMailSenderImpl"/></lhs><lhs name\="org.springframework.mail.javamail.JavaMailSenderImpl"><rhs name\="com.send.email.JavaMailSenderService"/><rhs name\="org.springframework.mail.javamail.JavaMailSenderImpl"/></lhs><lhs name\="com.send.email.JavaMailSenderService"><rhs name\="com.send.email.JavaMailSenderService"/></lhs><lhs name\="com.send.email.JavaMailSender"><rhs name\="com.send.email.JavaMailSender"/></lhs><lhs name\="org.springframework.mail.MailMessage"><rhs name\="org.springframework.mail.SimpleMailMessage"/></lhs><lhs name\="org.springframework.mail.SimpleMailMessage"><rhs name\="org.springframework.mail.SimpleMailMessage"/></lhs><lhs name\="org.springframework.http.HttpEntity"><rhs name\="org.springframework.http.RequestEntity"/></lhs><lhs name\="javax.mail.internet.MimePart"><rhs name\="javax.mail.internet.MimeMessage"/></lhs><lhs name\="javax.mail.Part"><rhs name\="javax.mail.internet.MimeMessage"/></lhs><lhs name\="javax.mail.Message"><rhs name\="javax.mail.internet.MimeMessage"/></lhs><lhs name\="javax.mail.internet.MimeMessage"><rhs name\="javax.mail.internet.MimeMessage"/></lhs><lhs name\="javax.mail.Address"><rhs name\="javax.mail.internet.InternetAddress"/></lhs><lhs name\="java.lang.Enum"><rhs name\="org.springframework.http.HttpMethod"/></lhs><lhs name\="java.lang.Runnable"><rhs name\="java.lang.Thread"/></lhs><lhs name\="java.lang.Thread"><rhs name\="java.lang.Thread"/></lhs></history>
+content_assist_number_of_computers=15
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+fontPropagated=true
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=16
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Consolas|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+proposalOrderMigrated=true
+spelling_locale_initialized=true
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

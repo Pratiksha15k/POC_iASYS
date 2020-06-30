@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="storeTestBedAlarm"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="storeTestBedAlarm"/>
+			<item value="cltrTheme&gt;div:nth-child(1)"/>
+			<item value="fixedCltr"/>
+			<item value="@media screen and (min-width: 1536px) and (max-width: 3840px)"/>
+			<item value="cltrContainerRow&gt;div"/>
+			<item value="cltrPlainAlarmTheme"/>
+			<item value="cltrPlainAknowledgeTheme"/>
+			<item value="cltrAknowledgeTheme"/>
+			<item value="-moz"/>
+			<item value="cltrContainerRow"/>
+			<item value="isEmpty"/>
+			<item value="applivcationInfo"/>
+			<item value="logger"/>
+			<item value="getTestBedAlarms"/>
+			<item value="channelInterval"/>
+		</list>
+		<list key="replacehistory">
+			<item value="cltrAlarmAknowledgeTheme"/>
+			<item value="cltrWarningAknowledgeTheme"/>
+			<item value="cltrWarningTheme"/>
+			<item value="cltrPlainAlarmTheme"/>
+			<item value="applicationInfo"/>
+			<item value="cltrAnimation"/>
+			<item value="rgb(34, 74, 74)"/>
+			<item value="rgb(18, 43, 43)"/>
+			<item value="rgb(49, 105, 105);"/>
+			<item value="lightblue"/>
+			<item value="getAlarmPresent"/>
+			<item value="alarmPresent"/>
+			<item value="20%"/>
+			<item value="rgb(188, 228, 228);"/>
+			<item value="background-color: rgb(188, 228, 228);"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="766"/>
+		<item key="DIALOG_Y_ORIGIN" value="182"/>
+		<item key="DIALOG_WIDTH" value="284"/>
+		<item key="DIALOG_HEIGHT" value="390"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="452"/>
+		<item key="DIALOG_Y_ORIGIN" value="247"/>
+	</section>
+</section>

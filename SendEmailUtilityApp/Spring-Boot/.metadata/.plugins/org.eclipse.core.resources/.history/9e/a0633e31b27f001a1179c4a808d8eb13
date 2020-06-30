@@ -1,0 +1,5 @@
+package brix.core.send.email;
+
+public class JavaMailSender {
+
+}

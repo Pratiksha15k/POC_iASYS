@@ -1,0 +1,8 @@
+package brix.core.send.email;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class JavaMailSender {
+
+}

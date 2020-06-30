@@ -1,0 +1,64 @@
+package com.send.email.bean;
+
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"data"
+})
+public class User {
+	@JsonProperty("toUser")
+	List<String> toUser;
+	
+	@JsonProperty("toCCUser")
+	List<String> toCCUser;
+	
+	@JsonProperty("subject")
+	String subject;
+	
+	@JsonProperty("body")
+	String body;
+	
+	public User(List<String> toUser, List<String> toCCUser, String subject, String body) {
+		super();
+		this.toUser = toUser;
+		this.toCCUser = toCCUser;
+		this.subject = subject;
+		this.body = body;
+	}
+	@JsonProperty("toUser")
+	public List<String> getToUser() {
+		return toUser;
+	}
+	@JsonProperty("toUser")
+	public void setToUser(List<String> toUser) {
+		this.toUser = toUser;
+	}
+	@JsonProperty("toCCUser")
+	public List<String> getToCCUser() {
+		return toCCUser;
+	}
+	@JsonProperty("toCCUser")
+	public void setToCCUser(List<String> toCCUser) {
+		this.toCCUser = toCCUser;
+	}
+	@JsonProperty("subject")
+	public String getSubject() {
+		return subject;
+	}
+	@JsonProperty("subject")
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+	@JsonProperty("body")
+	public String getBody() {
+		return body;
+	}
+	@JsonProperty("body")
+	public void setBody(String body) {
+		this.body = body;
+	}
+}

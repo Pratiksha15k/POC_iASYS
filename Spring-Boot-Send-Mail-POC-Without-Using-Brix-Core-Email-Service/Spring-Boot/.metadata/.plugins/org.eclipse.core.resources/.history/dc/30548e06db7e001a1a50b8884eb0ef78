@@ -1,0 +1,35 @@
+package com.send.email;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+
+public class JavaMailSenderService{
+	
+	@Autowired
+	private String host;
+	
+	@Autowired
+	private String username;
+	
+	@Autowired
+	private String password;
+	
+	@Autowired
+	private int port;
+	
+	@Autowired
+	private String protocol;
+	
+	@Autowired
+	private String tls;
+	
+	@Autowired
+	private String auth;
+	
+	@Autowired
+	private String startttls;
+	
+	@Autowired
+	private String ssltrust;
+	
+}

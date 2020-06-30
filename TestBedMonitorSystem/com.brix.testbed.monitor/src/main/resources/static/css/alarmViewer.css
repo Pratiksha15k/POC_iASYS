@@ -1,0 +1,98 @@
+@charset "ISO-8859-1";
+
+/************* Alarm Viewer CSS *************/
+
+.alarmtable>tbody>tr>td, .alarmtable>tbody>tr>th, .alarmtable>tfoot>tr>td, .alarmtable>tfoot>tr>th, .alarmtable>thead>tr>td, .alarmtable>thead>tr>th {
+    padding: 2px!important;
+    line-height: 1.42857143!important;
+    vertical-align: top!important;
+    border-top: 1px solid #ddd!important;
+}
+.alarmtable td, th {
+    padding: 0!important;
+    text-align: center!important;
+	font-size: small!important;
+    color: #515454!important;
+}
+.cltrAlarmViewer{
+	background-color: inherit;
+}
+
+.cltrLowerAlarmViewer td:nth-child(4){
+	-webkit-animation: cltrAlarmViewerAnimation 1s infinite; /* Safari 4+ */
+	-moz-animation: cltrAlarmViewerAnimation 1s infinite; /* Fx 5+ */
+	-o-animation: cltrAlarmViewerAnimation 1s infinite; /* Opera 12+ */
+	animation: cltrAlarmViewerAnimation 1s infinite; /* IE 10+, Fx 29+ */
+}
+
+.cltrAknwolegeLowerAlarmViewer>td:nth-child(4){
+	background-color: #ff6666 !important;
+}
+
+.cltrLowerWarningViewer>td:nth-child(5){
+	-webkit-animation: cltrWarningViewerAnimation 1s infinite; /* Safari 4+ */
+	-moz-animation: cltrWarningViewerAnimation 1s infinite; /* Fx 5+ */
+	-o-animation: cltrWarningViewerAnimation 1s infinite; /* Opera 12+ */
+	animation: cltrWarningViewerAnimation 1s infinite; /* IE 10+, Fx 29+ */
+}
+
+.cltrAknowledgeLowerWarningViewer>td:nth-child(5){
+	background-color: rgba(253, 244, 67, 0.73) !important;
+}
+
+.cltrUpperWarningViewer>td:nth-child(3){
+	-webkit-animation: cltrWarningViewerAnimation 1s infinite; /* Safari 4+ */
+	-moz-animation: cltrWarningViewerAnimation 1s infinite; /* Fx 5+ */
+	-o-animation: cltrWarningViewerAnimation 1s infinite; /* Opera 12+ */
+	animation: cltrWarningViewerAnimation 1s infinite; /* IE 10+, Fx 29+ */
+}
+
+.cltrAknowledgeUpperWarningViewer>td:nth-child(3){
+	background-color: rgba(253, 244, 67, 0.73) !important;
+}
+
+.cltrUpperAlarmViewer>td:nth-child(2){
+	-webkit-animation: cltrAlarmViewerAnimation 1s infinite; /* Safari 4+ */
+	-moz-animation: cltrAlarmViewerAnimation 1s infinite; /* Fx 5+ */
+	-o-animation: cltrAlarmViewerAnimation 1s infinite; /* Opera 12+ */
+	animation: cltrAlarmViewerAnimation 1s infinite; /* IE 10+, Fx 29+ */
+}
+
+.cltrAknowledgeUpperAlarmViewer>td:nth-child(2){
+	background-color: #ff6666 !important;
+}
+
+@-webkit-keyframes cltrAlarmViewerAnimation {
+  from { background-color: #ff6666; }
+  to { background-color: inherit; }
+}
+@-moz-keyframes cltrAlarmViewerAnimation {
+  from { background-color: #ff6666; }
+  to { background-color: inherit; }
+}
+@-o-keyframes cltrAlarmViewerAnimation {
+  from { background-color: #ff6666; }
+  to { background-color: inherit; }
+}
+@keyframes cltrAlarmViewerAnimation {
+  from { background-color: #ff6666; }
+  to { background-color: inherit; }
+}
+
+@-webkit-keyframes cltrWarningViewerAnimation {
+  from { background-color: rgba(253, 244, 67, 0.73); }
+  to { background-color: inherit; }
+}
+@-moz-keyframes cltrWarningViewerAnimation {
+  from { background-color: rgba(253, 244, 67, 0.73); }
+  to { background-color: inherit; }
+}
+@-o-keyframes cltrWarningViewerAnimation {
+  from { background-color: rgba(253, 244, 67, 0.73); }
+  to { background-color: inherit; }
+}
+@keyframes cltrWarningViewerAnimation {
+  from { background-color: rgba(253, 244, 67, 0.73); }
+  to { background-color: inherit; }
+}
+

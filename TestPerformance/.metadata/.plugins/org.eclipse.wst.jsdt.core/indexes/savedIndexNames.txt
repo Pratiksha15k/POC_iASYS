@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+E:\Projects\TestPerformance\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3390644795.index
+4226841025.index
+3440015029.index
+590000660.index
+2491947189.index
+1731901169.index

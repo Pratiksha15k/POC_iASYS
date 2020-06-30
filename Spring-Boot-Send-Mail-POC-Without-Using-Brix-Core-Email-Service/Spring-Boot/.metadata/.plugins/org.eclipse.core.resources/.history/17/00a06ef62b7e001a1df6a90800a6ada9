@@ -1,0 +1,24 @@
+{"details" :[
+  {
+    "toUser": "pratiksha.datir@iasys.co.in",
+    "toCCUser" : "prarthana.rode@iasys.co.in",
+    "subject" : "Testing Email",
+    "body" : "This email is for testing purpose"
+ 	},{
+   	"toUser": "jshantaram@iasys.co.in",
+    "toCCUser" : "vijaysangar@iasys.co.in",
+    "subject" : "Testing Email",
+    "body" : "This email is for testing purpose"
+  },{
+  	"toUser": "vaishnavi.pisole@iasys.co.in",
+    "toCCUser" : "prarthana.rode@iasys.co.in",
+    "subject" : "Testing Email",
+    "body" : "This email is for testing purpose"
+  },{
+  	"toUser": "sagar.mali@iasys.co.in",
+    "toCCUser" : "rushikesh.koli@iasys.co.in",
+    "subject" : "Testing Email",
+    "body" : "This email is for testing purpose"
+  }
+]
+}

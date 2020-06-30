@@ -1,0 +1,16 @@
+server.servlet.context-path= /sendEmailApp
+
+#Email Configuration Properties
+spring.mail.host=iasys-co-in.mail.protection.outlook.com
+spring.mail.username=Apptest@pvmsys.co.in
+spring.mail.password=AApp#pvmsys
+spring.mail.port=25
+#spring.mail.protocol=SMTP	
+spring.mail.alloweddomain=iasys.co.in	
+
+spring.mail.properties.mail.protocol=smtp
+spring.mail.properties.mail.tls= true
+ 
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.properties.mail.smtp.ssl.trust=smtp-mail.outlook.com

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;com.brix.testbed.monitor&apos;" deleteContents="true" description="Delete resource &apos;com.brix.testbed.monitor&apos;" element1="/com.brix.testbed.monitor" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1589371798980"/>
+</session>

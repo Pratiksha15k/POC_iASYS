@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="CommitDialog.location.x" value="0"/>
+	<item key="CommitDialog.location.y" value="0"/>
+	<item key="CommitDialog.size.x" value="1366"/>
+	<item key="CommitDialog.size.y" value="728"/>
+	<item key="CommitDialog.weights.0" value="500"/>
+	<item key="CommitDialog.weights.1" value="500"/>
+	<item key="RevertDialog.location.x" value="421"/>
+	<item key="RevertDialog.location.y" value="108"/>
+	<item key="RevertDialog.size.x" value="525"/>
+	<item key="RevertDialog.size.y" value="385"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Revision" value="319"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Date" value="107"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Author" value="206"/>
+	<item key="HistoryTableProvider.SVNHistoryPage.Comment" value="445"/>
+	<item key="TreeConflictsView.resource" value="E:/Projects/TestBedMonitorSystem/com.iasys.protobuf"/>
+	<item key="TreeConflictsView.container" value="true"/>
+	<item key="TreeConflictsView.col.Resource" value="152"/>
+	<item key="TreeConflictsView.col.Description" value="908"/>
+	<item key="CompareDialog.location.x" value="321"/>
+	<item key="CompareDialog.location.y" value="17"/>
+	<item key="CompareDialog.size.x" value="725"/>
+	<item key="CompareDialog.size.y" value="425"/>
+	<item key="UrlCombo.com.brix.testbed.monitor.0" value="https://pvmfrmsvnpj.iasys.com:8443/svn/com.brixIP.product/product/generalutility/TestBedMonitoringSystem/trunk/com.brix.testbed.monitor/src/main/webapp/WEB-INF/views/login.jsp"/>
+	<item key="ShowDifferencesAsUnifiedDiffDialogWC.location.x" value="381"/>
+	<item key="ShowDifferencesAsUnifiedDiffDialogWC.location.y" value="140"/>
+	<item key="ShowDifferencesAsUnifiedDiffDialogWC.size.x" value="605"/>
+	<item key="ShowDifferencesAsUnifiedDiffDialogWC.size.y" value="337"/>
+	<item key="RepositorySelectionPage.lastRepository" value="https://pvmfrmsvnpj.iasys.com:8443/svn/com.brixIP.product/product/generalutility/TestBedMonitoringSystem"/>
+	<item key="DirectorySelectionPage.lastParent_https://pvmfrmsvnpj.iasys.com:8443/svn/com.brixIP.product/product/generalutility/TestBedMonitoringSystem" value=""/>
+	<section name="NewLocationWizard">
+		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="https://PVMFRMSVNPJ.IASYS.COM:8443/svn/com.brixIP.product/product/generalutility/TestBedMonitoringSystem"/>
+		</list>
+	</section>
+	<section name="CommitWizard">
+		<item key="VWeight1" value="500"/>
+		<item key="VWeight2" value="500"/>
+		<item key="ShowCompare" value="true"/>
+		<item key="HWeight1" value="350"/>
+		<item key="HWeight2" value="650"/>
+	</section>
+</section>

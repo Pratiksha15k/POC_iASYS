@@ -1,0 +1,43 @@
+package brix.core.send.email;
+
+/**********
+ * @author pratiksha.datir
+ */
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.stereotype.Component;
+
+@SpringBootApplication
+@EnableScheduling
+public class SendEmailUtilityApplication  implements CommandLineRunner  {
+
+	
+	  @Autowired private JavaMailSenderService mailSenderService;
+	 
+
+	public static void main(String[] args) {
+		SpringApplication.run(SendEmailUtilityApplication.class, args);
+	}
+
+	
+	  @Override public void run(String... args) throws Exception { Runnable r1 =
+	  new Runnable() { public void run() { try { while (true) {
+	 /********
+		 * calls for getting details for sending email.
+		 */
+	
+	  mailSenderService.getMailDetails(); Thread.sleep(120000); } } catch
+	  (InterruptedException iex) {} } }; Thread thr1 = new Thread(r1);
+	  thr1.start(); Runnable r2 = new Runnable() { public void run() { try { while
+	  (true) {
+	 /********
+		 * calls for sending email.
+		 */
+			  mailSenderService.sendEmail(); Thread.sleep(120000); } } catch
+			  (InterruptedException iex) {} } }; Thread thr2 = new Thread(r2);
+			  thr2.start(); }
+			 
+}

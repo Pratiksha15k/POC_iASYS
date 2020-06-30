@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommitComments>	<CommitComment>application information added</CommitComment>
+	<CommitComment>alarm viewer, login error messages, log4j implementation</CommitComment>
+	<CommitComment>issues solved</CommitComment>
+	<CommitComment>changes</CommitComment>
+	<CommitComment>test bed changes</CommitComment>
+	<CommitComment>data parse log window according to each test bed and changes css according</CommitComment>
+	<CommitComment>log window lobipanel css</CommitComment>
+	<CommitComment>log window</CommitComment>
+	<CommitComment>log window design</CommitComment>
+	<CommitComment>theme wise css - separate files</CommitComment>
+</CommitComments>

@@ -1,0 +1,71 @@
+package com.send.email;
+
+import org.springframework.beans.factory.annotation.Value;
+
+public class JavaMailSender {
+	
+	@Value("${spring.mail.host}")
+	 String host;
+	
+	@Value("${spring.mail.username}")
+	 String username;
+	
+	@Value("${spring.mail.password}")
+	 String password;
+	
+	@Value("${spring.mail.port}")
+	 int port;
+	
+	@Value("${spring.mail.properties.mail.protocol}")
+	 String protocol;
+	
+	@Value("${spring.mail.properties.mail.tls}")
+	 String tls;
+	
+	@Value("${spring.mail.properties.mail.smtp.auth}")
+	 String auth;
+	
+	@Value("${spring.mail.properties.mail.smtp.starttls.enable}")
+	 String startttls;
+	
+	@Value("${spring.mail.properties.mail.smtp.ssl.trust}")
+	 String ssltrust;
+
+	public String host() {
+		return host;
+	}
+
+	public String username() {
+		return username;
+	}
+
+	public String password() {
+		return password;
+	}
+
+	public int port() {
+		return port;
+	}
+
+	public String protocol() {
+		return protocol;
+	}
+
+	public String tls() {
+		return tls;
+	}
+
+	public String auth() {
+		return auth;
+	}
+
+	public String startttls() {
+		return startttls;
+	}
+
+	public String ssltrust() {
+		return ssltrust;
+	}
+	
+	
+}

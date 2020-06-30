@@ -1,0 +1,2788 @@
+@CHARSET "ISO-8859-1";
+/*************************** Login Style *******************************/
+/* .panel-login {
+	border-color: #ccc;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+} */
+
+
+.loginImage{
+	/* max-width: 100%; */
+	width: auto;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size : contain;
+    overflow : hidden!important;
+}
+
+
+.panel-login {
+	border-color: #ccc;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.panel-login>.panel-heading {
+	color: #00415d;
+	background-color: #fff;
+	border-color: #fff;
+	text-align: center;
+}
+
+.panel-login>.panel-heading a {
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+.panel-login>.panel-heading a.active {
+	color: #029f5b;
+	font-size: 18px;
+}
+
+#announcement_banner {
+	border-bottom: 1px solid #ccc;
+	padding: 8px;
+	clear: both;
+	background: #F5F5F5;
+}
+
+.panel-login>.panel-heading hr {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+	background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+	background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+}
+
+.panel-login input[type="text"], .panel-login input[type="email"],
+	.panel-login input[type="password"] {
+	height: 45px;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+
+.panel-login input:hover, .panel-login input:focus {
+	outline: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #ccc;
+}
+
+.btn-login {
+	background-color: #59B2E0;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #59B2E6;
+}
+
+.btn-login:hover, .btn-login:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+
+.forgot-password {
+	text-decoration: underline;
+	color: #888;
+}
+
+.forgot-password:hover, .forgot-password:focus {
+	text-decoration: underline;
+	color: #666;
+}
+
+.btn-register {
+	background-color: #1CB94E;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #1CB94A;
+}
+
+.btn-register:hover, .btn-register:focus {
+	color: #fff;
+	background-color: #1CA347;
+	border-color: #1CA347;
+}
+
+.icon-size {
+	font-size: 87px;
+}
+
+#fams_toolbar {
+	background: #404246;
+}
+
+.webix_view .my_style {
+	height: 44px !important;
+	background: #404246;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* 
+Added By Mira for Logout dropdown
+ */
+.mystyle {
+	height: 40px;
+	width: 40px;
+	background: #03A9F4;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.mystyle>a:focus, .mystyle>a:hover {
+	height: 40px;
+	width: 40px;
+	background: #03A9F4;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.logout_btn {
+	padding: 10px;
+	cursor: pointer;
+	font-size: 15px;
+	font-weight: bold;
+	color: #00BCD4;
+	background: #383833;
+}
+
+.welcome_user_drop {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.logoutcss {
+	color: black !important;
+}
+
+.dropdownclass {
+	min-width: 250px;
+}
+
+.header-nav a {
+	color: white;
+}
+
+.header-nav a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+.jumbotron {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1px dashed deeppink;
+	min-height: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	display: -webkit-flex; /* For Safari */
+	-webkit-justify-content: center; /* For Safari */
+	-webkit-align-items: center; /* For Safari */
+	background-color: white;
+}
+
+/*
+* Add autoWidth property to make login button responsive in login page
+*/
+.btn {
+	font-weight: bold;
+	background-color: #0084F2;
+	color: white;
+	/* 	width: auto !important; */
+}
+
+.resButton {
+	width: auto !important;
+}
+
+/* end */
+.btn:hover {
+	font-weight: bold;
+	background-color: #0038CE;
+	color: white;
+}
+
+.btn:focus {
+	font-weight: bold;
+	background-color: #0084F2;
+	color: white;
+}
+/* .main_container{
+	margin-right: -8px;
+} */
+/*
+	Added by Mira 
+ */
+.authenticateUser, .authenticateUserCancel {
+	font-weight: bold !important;
+	background-color: #5E5E5E !important;
+	color: white !important;
+}
+
+.authenticationForm .has-error .control-label, .authenticationForm .has-error .help-block,
+	.authenticationForm .has-error .form-control, .authenticationForm .has-error .form-control-feedback
+	{
+	color: #ff0039;
+	border-color: #ff0039;
+}
+
+.header_tabs {
+	border-bottom: none !important;
+}
+
+.modulesNavigation {
+	color: white;
+	cursor: pointer;
+	position: relative;
+	list-style: none;
+	font-size: 14px;
+	/* width: 80px; */
+	height: 30px;
+	padding-top: 3px;
+}
+
+.modulesNavigation:hover {
+	background-color: #296CA3;
+	color: white;
+}
+
+#modulesNavigation li>:hover {
+	background-color: #296CA3;
+	color: white;
+}
+
+.navbar-default {
+	background-color: #205081 !important;
+	height: 40px;
+}
+
+#quickSearchInput {
+	background: rgba(243, 238, 238, 0.2);
+	border-radius: 3px;
+	box-shadow: none;
+	color: rgb(234, 227, 227) !important;
+	height: 28px;
+	margin: -2px;
+	padding-right: 26px;
+	border: none;
+	width: 170px;
+	padding-left: 10px;
+}
+
+#quicksearchbarform>button {
+	color: rgba(255, 255, 255, 0.6);
+	content: "\f002";
+	font-family: "FontAwesome";
+	height: 16px;
+	margin-top: 11px;
+	position: absolute;
+	right: 18px;
+	top: 0;
+	width: 16px;
+	font-size: 13px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+}
+
+#quickSearchInput::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	color: rgba(255, 255, 255, 0.6);
+}
+
+#quickSearchInput::-moz-placeholder { /* Firefox 19+ */
+	color: rgba(255, 255, 255, 0.6);
+}
+
+#quickSearchInput:-ms-input-placeholder { /* IE 10+ */
+	color: rgba(255, 255, 255, 0.6);
+}
+
+#quickSearchInput:-moz-placeholder { /* Firefox 18- */
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.rightSideIcons {
+	/*    margin-top: 3px; */
+	margin-right: 2px;
+}
+
+.titleSpan {
+	display: none;
+	float: left;
+	font-size: 14px;
+	line-height: 1.4286;
+	margin-top: -6px;
+	padding: 10px 0px 0px 10px;
+	color: #fff;
+}
+
+.sub_ListingModules {
+	display: none;
+	position: absolute;
+	background-color: white;
+	min-width: 180px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 5;
+	word-spacing: 0px;
+	line-height: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.modulesNavigation:hover .sub_ListingModules {
+	display: block;
+}
+
+.sub_ListingModules li>a {
+	font-size: 14px;
+	color: black;
+	padding: 4px 10px;
+}
+
+.sub_ListingModules li>a:hover {
+	color: white;
+}
+
+.headerToggleBtn.navbar-default .navbar-toggle .icon-bar {
+	background-color: #fff !important;
+}
+
+.brixLoaderWrapper {
+	margin-left: 0px;
+	margin-top: 40px !important;
+}
+
+.brixLoaderWrapperLogin {
+	margin-left: 0px;
+	margin-top: 0px !important;
+}
+
+.searchBtn {
+	height: 25px;
+	background: white !important;
+	color: black !important;
+}
+
+.searchBtn:hover {
+	background: white;
+	color: black;
+}
+
+.searchBtn:active {
+	background: white;
+	color: black;
+}
+
+.searcbar {
+	width: 210px;
+}
+
+.searcbar .navbar-form {
+	padding: 0px 15px !important;
+}
+
+.helpIcon {
+	padding: 13px 10px 10px 0px;
+}
+
+.helpBtn {
+	font-size: 16px;
+	color: white;
+}
+
+.helpDropDown {
+	color: white;
+	height: 10px;
+	width: 0px;
+}
+
+#settingIconId:hover .administrationTruncate {
+	display: block;
+}
+
+.settingIcon {
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	margin-top: 34%!important;	
+	left: 40%!important;
+}
+
+.userIcon {
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	margin-left: 18px!important;
+	padding-top: 6% !important;
+	left: 110%!important;
+}
+
+.userDropDown {
+	color: white;
+	height: 10px;
+	width: 0;
+}
+
+.topNavbar {
+	margin: 0;
+	padding: 0;
+}
+/**
+ * This css is used for settingsIcon styling and its hover effect
+ * @author kmira
+ * 
+ */
+.configSettingHeader {
+	color: #707070;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 7px 17px 5px;
+	text-transform: uppercase;
+	border-bottom: 0.5px solid #CCC;
+}
+
+.administrationTruncate {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.administrationTruncate li>a:hover {
+	background: #3B73AF;
+	color: white;
+}
+
+.administrationTruncate li {
+	margin: 2px 0;
+}
+
+/******************** Logout Css ***********************/
+.custom-jumbotron {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	display: -webkit-flex; /* For Safari */
+	-webkit-justify-content: center; /* For Safari */
+	-webkit-align-items: center; /* For Safari */
+	background-color: white;
+}
+
+.box {
+	width: 70%;
+	height: 200px;
+	background: #FFF;
+	margin: 40px auto;
+}
+
+.effect7 {
+	position: relative;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px
+		rgba(0, 0, 0, 0.1) inset;
+	-moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px
+		rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1)
+		inset;
+}
+
+.capslockOnClass {
+	font-weight: 700;
+	margin-top: 6px;
+	color: red;
+	font-size: 14px;
+	margin-left: 15px;
+	display: none;
+}
+
+.mainMasterContainer {
+	padding: 10px 15px;
+	margin-bottom: 30px;
+	color: inherit;
+	background-color: #eee;
+	border-bottom: 0.3px;
+	border-bottom-style: solid;
+	border-bottom-color: #A7A7A7;
+	border-bottom-style: solid;
+}
+
+.masterSideNav {
+	background-color: #fff;
+	height: 91%;
+	border-right: 0.3px;
+	border-right-color: #A7A7A7;
+	border-right-style: solid;
+}
+
+.custom-nav-pills>li.active>a, .custom-nav-pills>li.active>a:focus,
+	.custom-nav-pills>li.active>a:hover {
+	color: black;
+	background-color: #9E9E9E;
+	border-radius: 0em;
+}
+
+.custom-nav-pills>li>a:hover, .custom-nav-pills>li>a:hover {
+	background-color: #E6E6E6;
+	border-radius: 0em;
+}
+
+/* New Added CSS */
+.logoImg {
+	padding-left: 5px;
+	float: left;
+	cursor: default!important;
+}
+
+.logoImgheader {
+	margin-left: -3% !important;
+}
+
+#appIcon {
+	float: left;
+	width: 30px;
+	margin-top: -6px;
+	height: 30px;
+	margin-left: -23px;
+}
+
+#appIcon .webix_view.webix_control.webix_el_button, #appIcon .webix_el_box
+	{
+	height: 30px !important;
+	width: 30px !important;
+}
+
+#appIcon .webix_img_btn {
+	line-height: 24px !important;
+}
+
+#appIcon .webix_image {
+	height: 24px !important;
+	width: 24px !important;
+}
+
+.iasysImagDiv {
+	position: fixed;
+	bottom: 15px !important;
+	left: 84%!important;
+	width: 12%!important;
+}
+
+.iasysImagDiv img {
+	height: 12px;
+	width: 70px;
+	display: inline-block;
+	margin-top: 0%;
+}
+
+.brix_footer_image {
+	/* 	height: 20px!important; */
+	/* 	width: 119px!important; */
+	/* 	margin-left: -31%!important; */
+	/* 	left: 10px; */
+	/* 	margin-left: 1% !important; */
+	margin-left: 2%!important;
+	position: static;
+	bottom: 15px !important;
+	left: 88%!important;
+	cursor: default!important;
+}
+
+.brixbgicon {
+	margin-top: 15% !important;
+}
+
+.barCss .webix_icon_btn {
+	color: white !important;
+}
+
+/* .img-responsive {
+	background-repeat: no-repeat!important;
+	background-position: center center!important;
+	background-attachment: fixed!important;
+	-webkit-background-size: cover!important;
+	-moz-background-size: cover!important;
+	-o-background-size: cover!important;
+	background-size: cover!important;
+	background-color: white!important;
+} */
+
+/* end */
+
+/*************************** System Configuration CSS ***********************/
+.customSystemConfiguration_jumbotron {
+	padding: 0px;
+	color: inherit;
+	background-color: #f5f5f5;
+	/* border-bottom: 0.3px;
+	border-bottom-style: solid;
+	border-bottom-color: #A7A7A7;
+	border-bottom-style: solid; */
+}
+
+#administarionCss {
+	font-size: 22px;
+	padding: 15px;
+	margin: 0;
+	padding-left: 32px !important;
+}
+
+.navgroup-horizontal {
+	background: #f5f5f5;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	margin: 0;
+	padding: 0 10px;
+}
+
+#administrationUl {
+	margin: 0;
+	padding: 10px;
+	height: 40px;
+}
+
+.administrationComponent {
+	float: left;
+	list-style: none;
+}
+
+.administrationComponent>a {
+	padding: 9px 10px;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.administrationComponent a:hover {
+	background: #E6E6E6;
+}
+
+.administrationComponent a:active {
+	color: #333;
+}
+
+.navgroup-horizontal .administrationCompUl>li>.activeConfig {
+	color: #333;
+	font-weight: bold;
+	position: relative;
+}
+
+.row {
+	/* margin-right: -7px !important; */
+}
+
+.sidenav {
+	background-color: #fff;
+	height: 80%;
+	border-right: 0.3px;
+	border-right-color: #ccc;
+	border-right-style: solid;
+	padding: 5px;
+}
+
+.sidenavchild {
+	background-color: #fff;
+	border-right: 0.3px;
+	border-right-color: #ccc;
+	border-right-style: solid;
+	padding: 5px;
+}
+
+.admin-menu-links {
+	padding: 20px 0px 0px 10px;
+}
+
+.brixSystemNav {
+	list-style: none;
+	font-size: 14px;
+	color: #3b73af;
+	line-height: 29px;
+	padding: 7px 0px;
+	word-wrap: break-word;
+	font-weight: normal;
+	text-transform: none;
+}
+
+.custom-nav-pills>li.active>a, .custom-nav-pills>li.active>a:focus,
+	.custom-nav-pills>li.active>a:hover {
+	color: black;
+	background-color: #9E9E9E;
+	border-radius: 0em;
+}
+
+.custom-nav-pills>li>a:hover, .custom-nav-pills>li>a:hover {
+	background-color: #E6E6E6;
+	border-radius: 0em;
+}
+
+.brix-nav-heading {
+	color: #707070;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1.66666666666667;
+	text-transform: uppercase;
+	border-top: 0.5px solid #ccc;
+	padding: 10px 10px 4px 10px;
+	cursor: pointer;
+}
+
+.caretButton {
+	height: 20px;
+	width: 100%;
+	text-align: left;
+	margin-top: 0px;
+}
+
+.systemNConfigNames {
+	float: left;
+	clear: both;
+}
+
+.caretBtnCss {
+	text-align: right;
+}
+
+.rightContainer {
+	/* height: 91%; */
+	padding: 10px;
+}
+
+.systemConfigRow {
+	padding-left: 20px;
+}
+
+.brix-genSetting-header {
+	margin: 15px 15px 10px 0px;
+	height: 26px;
+}
+
+.systemDashboardHeader {
+	font-size: 16px;
+	line-height: 5px;
+	clear: both;
+}
+
+.systemDashboardHeaderParent {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+
+.settingsCss {
+	font-size: 20px;
+	padding-left: 0px;
+}
+
+.settingsBtn {
+	position: absolute;
+	right: 40px;
+	top: 30px;
+}
+
+.settingsHeader {
+	background: #f5f5f5;
+	color: #333;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	height: 2.14285714em;
+	border-radius: 3.01px;
+	line-height: 1.42857143;
+	white-space: nowrap;
+	margin-left: -11% !important;
+}
+
+.databaseMonitoringP {
+	font-size: 13px;
+}
+
+.activeConfig {
+	color: black;
+}
+
+.navgroup-horizontal .administrationCompUl>li>.activeConfig {
+	color: #333;
+	font-weight: bold;
+	position: relative
+}
+
+.navgroup-horizontal .administrationCompUl>li>.activeConfig::before,
+	.navgroup-horizontal .administrationCompUl>li>.activeConfig::after {
+	border: 8px solid transparent;
+	border-style: outset outset solid outset;
+	border-bottom-color: #ccc;
+	bottom: -4px;
+	content: "";
+	height: 0;
+	left: 50%;
+	margin-left: -8px;
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+}
+
+.navgroup-horizontal .administrationCompUl>li>.activeConfig::after {
+	background: transparent;
+	border-bottom-color: #fff;
+	bottom: -6px;
+}
+
+.brixSystemNav li:hover {
+	background: #E6E6E6;
+}
+
+.brixSystemNav li>a {
+	text-decoration: none;
+}
+
+.brixSystemNav li>a {
+	padding: 0px 0px 0px 10px !important;
+}
+/********** SYS Config css end **********/
+#session-timeout-modal {
+	z-index: 999999 !important;
+}
+
+.visibilityCss {
+	visibility: hidden;
+}
+
+.template_form {
+	background: #f5f5f5;
+	color: #333;
+	cursor: pointer;
+	/* 	border: 1px solid #ccc; */
+	font-size: 14px;
+	/* 	border-radius: 3.01px; */
+	line-height: 1.42857143 !important;
+	white-space: nowrap;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.template_form label {
+	font-weight: normal !important;
+	font-size: 14px !important;
+	color: #333333 !important;
+	font-family: Arial, sans-serif !important;
+}
+
+#selectTemplateCombo .webix_el_colorpicker span.webix_input_icon,
+	.webix_el_combo span.webix_input_icon, .webix_el_datepicker span.webix_input_icon,
+	.webix_el_dbldatepicker span.webix_input_icon, .webix_el_richselect span.webix_input_icon
+	{
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	border: 1px solid #ccc !important;
+	height: 24px !important;
+}
+
+#templatetextarea .brix-form .webix_inp_textarea {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.listCss_app_menu .webix_list_item {
+	height: 40px !important;
+	padding-top: 8px !important;
+}
+
+.listCss_app_menu {
+	border: none !important;
+	height: auto !important;
+	width: auto !important;
+	margin-top: 30px!important;
+}
+
+.winmenu {
+	border: none !important;
+	/* background: #c7c2c2 !important; */
+	/* 	height: 150px !important; */
+	/* 	width: 302px !important; */
+	border-radius: 6px !important;
+	background: #fff;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	box-shadow: 0px 2px 8px 4px #888888;
+	height: auto !important;
+	/* 	width: auto!important; */
+	/* 	width:calc( 100% - 500px ); */
+}
+
+.profilePicCss {
+	margin-left: -8% !important;
+}
+
+.profilePicCss>div>div>div {
+	background-color: white !important;
+}
+
+.profilePicCss img {
+	border-radius: 50%;
+	border: 1px solid #205081;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-attachment: fixed !important;
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;
+	/* 	height: 50%!important; */
+	/* 	width: 100%!important; */
+	height: 100% !important;
+	width: 100% !important;
+	/* 	margin-top: 2%; */
+	/* 	margin-left: -8%; */
+}
+
+.imageProfileCss {
+	border-radius: 50%;
+}
+
+.img_preview>div img {
+	max-width: 100%;
+	max-height: 100%;
+	/* 	height: 100%; */
+	/* 	width: 100%; */
+}
+
+.userprofilelinkcss:HOVER {
+	cursor: pointer !important;
+}
+
+.form_lable {
+	float: left;
+	clear: both;
+	margin-right: 10px;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.lableSpaceName {
+	margin-left: 40px;
+}
+
+.discriptionEdit {
+	color: #707070;
+	font-size: 12px;
+	line-height: 1.66666666666667;
+	margin: 5px 0 0 97px;
+}
+
+.eventsForm {
+	margin-left: 150px;
+	margin-top: 30px;
+}
+
+.editSettingsHeader {
+	background: #f5f5f5;
+	color: #333;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	height: 2.14285714em;
+	border-radius: 3.01px;
+	line-height: 1.42857143;
+	white-space: nowrap;
+	margin-left: 80% !important;
+}
+
+.cancelBtn {
+	margin-left: 9px;
+	cursor: pointer;
+	text-decoration: none !important;
+}
+
+.jvm_info_config .webix_view .webix_ss_header {
+	height: 0px !important;
+}
+
+.serverInfo.webix_view {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.serverInfo.webix_ss_header {
+	height: 0px !important;
+}
+
+#materValue {
+	height: 100%;
+	width: 250px;
+	float: left;
+	clear: both;
+	margin-right: 10px;
+	background-color: #00CC00;
+}
+
+.interfacesPcss {
+	font-size: 13px;
+}
+
+.listBorder {
+	border-radius: 6px;
+	height: 86% !important;
+	border-color: #CCCCCC !important;
+	color: #333333 !important;
+}
+
+.uploaderButtonCss>div button {
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer !important;
+	border: 1px solid #ccc !important;
+	font-size: 14px !important;
+	border-radius: 3.01px !important;
+	line-height: 1.42857143 !important;
+	white-space: nowrap !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	height: 30px;
+	text-align: center;
+}
+
+.webixtype_base {
+	background: #f5f5f5 !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 14px !important;
+	border: 1px solid #ccc !important;
+	color: #333 !important;
+	border-radius: 3.01px !important;
+}
+
+.templateconfighiddenButton {
+	visibility: hidden;
+}
+
+.applyButtonCss>div button {
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer !important;
+	border: 1px solid #ccc !important;
+	font-size: 14px !important;
+	border-radius: 3.01px !important;
+	line-height: 1.42857143 !important;
+	white-space: nowrap !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	height: 30px;
+}
+
+.webix_view.webix_control.webix_el_button.applyButtonCss.webix_disabled_view .webix_disabled
+	{
+	background-color: #fff !important;
+}
+
+.webix_view>.webix_disabled {
+	opacity: 0.5 !important;
+	background: white;
+	background-color: white;
+}
+
+.customiconbutton .webix_icon_btn {
+	font-size: 16px !important;
+	color: black !important;
+}
+
+.loggingModalCss.brix_popup.webix_view .webix_win_head>.webix_view>.webix_template
+	{
+	background: #3B73AF !important;
+	box-shadow: none !important;
+	font-size: 12px;
+	font-weight: bold !important;
+	line-height: 1.666666666667;
+	padding-top: 4px !important;
+	color: #fff !important;
+}
+
+.loggingModalCss .webix_template {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #fff !important;
+	font-size: 12px !important;
+}
+
+.loggingModalCss.brix_popup .popup_title_css {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #fff !important;
+	font-size: 12px !important;
+}
+
+.loggingModalCss.brix_popup.webix_window {
+	border-radius: 6px !important;
+	background: #fff;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	box-shadow: 0px 2px 8px 4px #888888;
+}
+
+.userPersonalDetails, .webix_list {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333 !important;
+}
+
+.brix_form_label {
+	color: #333 !important;
+	font-size: 13px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: bold !important;
+}
+
+.customer_grid_style.webix_view {
+	height: 44px !important;
+	background: #FFF;
+	color: #a7a5a5;
+	font-size: 20px;
+	font-weight: bold;
+	width: 100% !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	line-height: 1.42857143 !important;
+	color: #333 !important;
+}
+
+.brix-master-nav-heading {
+	color: #707070;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1.66666666666667;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ccc;
+	padding: 10px 10px 4px 10px;
+}
+
+.master-config-right-side-view .webix_layout_toolbar.webix_toolbar {
+	background: white !important;
+}
+
+.master-config-right-side-view .webix_layout_toolbar.webix_toolbar .webix_el_icon,
+	.webix_layout_toolbar.webix_toolbar .webix_icon_btn,
+	.webix_layout_toolbar.webix_toolbar .webix_icon_button,
+	.webix_layout_toolbar.webix_toolbar .webix_img_btn,
+	.webix_layout_toolbar.webix_toolbar .webix_img_btn_abs,
+	.webix_layout_toolbar.webix_toolbar .webix_img_btn_abs .webix_icon,
+	.webix_layout_toolbar.webix_toolbar .webix_img_btn_abs .webix_img_btn_text,
+	.webix_layout_toolbar.webix_toolbar .webix_img_btn_top .webix_icon,
+	.webix_layout_toolbar.webix_toolbar .webix_img_btn_top .webix_img_btn_text
+	{
+	color: black;
+}
+
+.master-config-right-side-view.webix_view webix_control webix_el_button
+	{
+	width: 35px !important;
+}
+
+.master-config-right-side-view .webix_icon_btn {
+	font-size: 33px;
+	width: 34px;
+}
+
+/* .master-config-right-side-view .webix_layout_toolbar.webix_toolbar { */
+/* 	background: #caced0 !important; */
+/* } */
+.master-config-right-side-view .webix_view {
+	border: none !important;
+}
+
+.masterRightContainer {
+	height: 91%;
+}
+
+.brix_form_label {
+	color: #333 !important;
+	font-size: 13px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: bold !important;
+}
+
+.brix_form .webix_inp_label {
+	color: #333 !important;
+	font-size: 13px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: bold !important;
+}
+
+.user_add_form .webix_section {
+	padding-left: 0px !important;
+}
+
+.user_add_form .webix_scroll_cont {
+	overflow: visible !important;
+}
+
+.multiselect_css>div>div {
+	border-radius: 6px !important;
+	color: #333333 !important;
+}
+
+.emailToolbarCss {
+	margin-top: -1% !important;
+}
+
+.mailtmplthead {
+	font-size: 20px;
+	padding-left: 0px;
+	color: #333333 !important;
+}
+
+.field-icon {
+	font-size: 18px;
+	color: #4F616F;
+	float: right;
+	margin-left: -25px;
+	margin-top: -30px;
+	position: relative;
+	margin-right: 4%;
+	z-index: 2;
+}
+
+.headerLeftDiv {
+	margin-left: -1%!important;
+}
+
+.appmenuCss {
+	position: fixed!important;
+}
+
+.userProfileCss {
+	position: fixed!important;
+	border-width: 1px;
+	z-index: 9999!important;
+	top: 28px!important;
+	height : auto!important;
+}
+
+.customAccordionCss .webix_accordionitem_label {
+	border-bottom: 1px solid #A6A6A6!important;
+	border-bottom-color: #A6A6A6!important;
+	border-bottom-style: solid!important;
+	border-bottom-width: 1px!important;
+	height: 25px!important;
+	margin-top: -10px!important;
+	margin-left: 30px!important;
+	width: 96%!important;
+}
+.accordionLabel {
+	font-size: 13px !important;
+	line-height: 46px!important;
+	background: #fff!important;
+	color: #333!important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	margin-left: -10px!important;
+	font-weight: bold !important;
+}
+
+
+.RichTextEditorCss {
+      border-width: 0px 0px 1px 0px!important;
+    /* height : 180px!important; */
+      width : 900px!important;
+      height: 190px!important;
+  }
+/* .RichTextEditorCss .webix_mce_textEditorId {
+      width : 900px!important;
+      height: 190px!important;
+  }
+  
+.RichTextEditorCss .webix_mce_activityTextEditorId{
+	 width : 900px!important;
+     height: 190px!important;
+} */
+.customListCss{
+	border-width: 1px 1px 1px 1px!important;
+    overflow-y: scroll;
+    margin-left: 0px;
+    margin-top: -1px;
+    width: 230px;
+    height: 263px;
+}
+
+.customInvalidMessage{
+	color: red !important;
+	font-size: 13px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.errorSpanClass{
+	padding : 0px!important;
+	/* margin-left : 30px!important; */
+	color : #FD597E!important;
+}
+
+.customDatatable .webix_hcell{
+	width: 300px!important;  
+}
+
+.scheduleMessageSpan{
+	color: black;
+    font-weight: 550;
+    margin-left: 25px;
+}
+
+.multiline{   
+
+  line-height: 20px !important;       
+  position: relative;
+/*   top: 24px; */
+    
+}
+
+.closeicon {
+    float: right;
+    font-weight: bold;
+    right: 16px;
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: -5px;
+    color: #fff;
+}
+
+.activityErrorSpanClass {
+	margin-top: -103px!important;
+	padding : 0px!important;
+	color : #FD597E!important;
+	/* position :absolute; */
+}   
+.fa-home:hover {
+    color: #551A8B!important;
+}
+
+/* .webix_inp_top_label {
+	font-weight: normal !important;
+	font-size: 14px !important;
+	color: #333333 !important;
+	font-family: Arial, sans-serif !important;
+}
+
+.labelCss {
+	font-weight: normal !important;
+	font-size: 14px !important;
+	color: #333333 !important;
+	font-family: Arial, sans-serif !important;
+}
+
+.uploaderButtonCss>div button {
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer !important;
+	border: 1px solid #ccc !important;
+	font-size: 14px !important;
+	border-radius: 3.01px !important;
+	line-height: 1.42857143 !important;
+	white-space: nowrap !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	height: 30px;
+	text-align: center;
+}
+
+.applyButtonCss>div button {
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer !important;
+	border: 1px solid #ccc !important;
+	font-size: 14px !important;
+	border-radius: 3.01px !important;
+	line-height: 1.42857143 !important;
+	white-space: nowrap !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	height: 30px;
+}
+
+.passwordPolicyButtonCss {
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer !important;
+	border: 1px solid #ccc !important;
+	font-size: 14px !important;
+	font-weight: normal !important;
+	border-radius: 3.01px !important;
+	line-height: 1.42857143 !important;
+	white-space: nowrap !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	height: 30px;
+	margin-left: 20% !important;
+}
+
+.setDefaultButtonCss>div button {
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer !important;
+	border: 1px solid #ccc !important;
+	font-size: 14px !important;
+	border-radius: 3.01px !important;
+	line-height: 1.42857143 !important;
+	white-space: nowrap !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	height: 30px;
+}
+
+.templatetextarea {
+	background-image: url("../images/automobile.JPG");
+}
+
+.webix_popup_text {
+	margin: 0 0 5px;
+	padding-top: 25px;
+	color: #333;
+	box-shadow: 0 3px #DDDDDD inset !important;
+	font-size: 14px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	border-color: #ccc !important;
+}
+
+.webix_popup_button.confirm div {
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer !important;
+	border: 1px solid #ccc !important;
+	font-size: 14px !important;
+	border-radius: 3.01px !important;
+	white-space: nowrap !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	height: 30px;
+}
+
+.webix_popup_button.confirm div, .webix_popup_button div {
+	background: #ccc !important;
+	color: #333 !important;
+	cursor: pointer !important;
+	border: 1px solid #ccc !important;
+	font-size: 14px !important;
+	border-radius: 3.01px !important;
+	white-space: nowrap !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	height: 30px;
+}
+
+.listBorder {
+	border-radius: 6px;
+	height: 86% !important;
+	border-color: #CCCCCC !important;
+	color: #333333 !important;
+}
+
+.titleText .webix_el_colorpicker input, .webix_el_combo input,
+	.webix_el_datepicker input, .webix_el_search input, .webix_el_text input
+	{
+	border-radius: 6px;
+	border-color: #CCCCCC !important;
+	color: #333333 !important;
+}
+
+.img_preview>div img {
+	max-width: 100%;
+	max-height: 100%;
+		height: 100%;
+		width: 100%;
+}
+
+.multiselect_css>div label {
+	color: #333333 !important;
+}
+
+.multiselect_css>div>div {
+	border-radius: 0px !important;
+	color: #333333 !important;
+}
+
+end css
+.incomingMailBtnAdvance {
+	margin-top: 20px;
+	padding-bottom: 24px;
+	margin-left: 130px;
+}
+
+.queue_mail_config {
+	margin-top: 20px;
+}
+
+.mailQueue .webix_ss_header td {
+	border: none !important;
+}
+
+.mailQueue.webix_view {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.mailQueue {
+	border-bottom: 1px solid #ccc;
+}
+
+.sendMailForm {
+	margin-left: 90px;
+	margin-top: 40px;
+	font-size: 13px;
+}
+
+.inputFrom {
+	padding-left: 20px;
+	font-size: 13px;
+}
+
+.radioSpan {
+	padding-left: 8px;
+}
+
+.replaytoInput {
+	margin-left: 26px;
+}
+
+.replaytoLable {
+	margin-left: -17px;
+}
+
+.projectsendmail {
+	margin-left: 27px !important;
+}
+
+.descriptionSendMail {
+	color: #707070;
+	font-size: 12px;
+	line-height: 1.66666666666667;
+	margin: 0px 0 0 52px;
+}
+
+.sectionDiv {
+	margin-top: 15px;
+}
+
+.messagetoLable {
+	margin-left: -57px;
+}
+
+.bccCheckbox {
+	margin-left: 25px !important;
+}
+
+.sendMailSendBtnCont {
+	margin-left: -90px;
+	margin-top: 30px;
+	border-top: 1px solid #ccc;
+	padding-left: 137px;
+	padding-top: 20px;
+	margin-left: 0px !important;
+}
+
+.permissionHelperSubHeader {
+	padding-left: 10px;
+}
+
+.permissionHelperForm {
+	margin: 30px 10px 10px 90px;
+}
+
+.permissionHelperInput {
+	border: 1px solid #ccc;
+	height: 2.1428571428571em;
+	line-height: 1.4285714285714;
+	padding: 4px 5px;
+	border-radius: 3.01px;
+	width: 500px;
+	margin-left: 15px;
+}
+
+.permissionHelperdescription {
+	color: #707070;
+	font-size: 12px;
+	line-height: 1.66666666666667;
+	margin: 5px 0 0 46px;
+}
+
+.permissionhelper-user-group {
+	margin-top: 5px;
+}
+
+.permissionLable {
+	margin-left: -38px;
+}
+
+.permissionBtn {
+	margin-top: 15px;
+	margin-left: 45px;
+}
+
+.notificationLable {
+	margin-left: -73px;
+}
+
+.searchInput {
+	float: left;
+	margin-left: 20px;
+	clear: both;
+}
+
+.ownerInput {
+	margin-left: 460px;
+}
+
+.sharedFilterInput {
+	border: 1px solid #ccc;
+	height: 2.1428571428571em;
+	line-height: 1.4285714285714;
+	padding: 4px 5px;
+	border-radius: 3.01px;
+	width: 260px;
+	margin-top: 4px;
+}
+
+.discription {
+	color: #707070;
+	font-size: 12px;
+	line-height: 1.66666666666667;
+	margin: 5px 0 0 0;
+}
+
+.sharedFilterUsers {
+	font-size: 16px !important;
+	margin-top: -8px;
+	cursor: pointer;
+}
+
+.sharedFilterBtn {
+	margin-top: 20px;
+	margin-left: 19px;
+}
+
+.sharedFilter .webix_ss_header td {
+	border: none !important;
+}
+
+.sharedFilter.webix_view {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.sharedFilter {
+	border-bottom: 1px solid #ccc !important;
+}
+
+.settingsBtnAttachment {
+	position: absolute;
+	right: 40px;
+	top: 0px;
+}
+
+.editCss {
+	padding-right: 7px;
+}
+
+.attachmenthelpglyphcss {
+	font-size: 20px;
+	margin-top: 20px;
+	padding-left: 10px;
+}
+
+.attachments .webix_ss_header td {
+	border: none !important;
+}
+
+.attachments.webix_view {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.attachments .webix_ss_footer {
+	border-bottom: 1px solid #ccc !important;
+}
+
+.attachments .webix_ss_header {
+	height: 0px !important;
+}
+
+.attachments_config {
+	margin-top: 10px;
+}
+
+.messageInfoattachments {
+	margin: -42px 0px 0px 69px;
+}
+
+.parameterCss {
+	font-weight: bold !important;
+}
+
+.eventsSubheader {
+	font-size: 13px;
+	margin-top: 13px;
+}
+
+.eventstypes {
+	margin-top: 18px;
+}
+
+.eventstypesList {
+	margin-top: 15px;
+	line-height: 19px;
+}
+
+.events .webix_ss_header td {
+	border: none !important;
+}
+
+.events.webix_view {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.events .webix_ss_footer {
+	border-bottom: 1px solid #ccc !important;
+}
+
+.eventsForm {
+	margin-left: 150px;
+	margin-top: 30px;
+}
+
+.descriptionInputEvents {
+	margin-top: 15px;
+	margin-left: -31px;
+}
+
+.discriptionEvents {
+	color: #707070;
+	font-size: 12px;
+	line-height: 1.66666666666667;
+	margin: 5px 0 0 74px;
+}
+
+.inputlabelEvents {
+	font-weight: normal;
+	font-size: 13px;
+	padding-right: 8px;
+}
+
+.eventsBtn {
+	margin-top: 20px;
+	margin-left: 49px;
+}
+
+.listenerSubheader {
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+.listenersHeaderParent {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 9px;
+}
+
+.listenersHeader {
+	font-size: 16px;
+	line-height: 1.5;
+	clear: both;
+	float: left;
+}
+
+.listeners.webix_view {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.listeners .webix_ss_header td {
+	border: none !important;
+}
+
+.listeners .webix_ss_footer {
+	border-bottom: 1px solid #ccc !important;
+}
+
+#builtinListenersArrow {
+	font-size: 13px;
+	margin-left: 92px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+.builtInListeners {
+	margin-left: 76px;
+	font-size: 13px;
+	margin-top: -8px;
+}
+ */
+/** Data Table Common CSS added by Ankur ****************/
+/* .brix-datatable>div>div>div>div td div {
+	color: #333;
+	border-bottom: 1px solid #ccc;
+	caption-side: top;
+	padding: 0px 10px;
+	text-align: left;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+}
+
+.brix-datatable>div>div>div>div td {
+	border: none !important;
+}
+
+.brix-datatable.webix_view {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+ */
+/*************** Webix Combo common Css added by Ankur ****************/
+/* .brix_combo .webix_el_combo .webix_inp_label {
+	color: #333;
+}
+
+.brix_combo .webix_el_combo input {
+	font-family: Arial, sans-serif !important;
+	color: #333;
+	border-radius: 0px;
+}
+
+.brix_combo .webix_el_combo span.webix_input_icon {
+	background-color: #9E9E9E;
+	border-radius: 0 0 0 0;
+}
+
+.databaseMonitoringP {
+	font-size: 13px;
+}
+
+#chartContainerConnectionPool, #chartContainerReadsWrites {
+	height: 350px
+}
+
+.discriptionLogging {
+	color: #707070;
+	font-size: 12px;
+	line-height: 1.66666666666667;
+	margin: 5px 0 0 116px;
+}
+
+.loggingForm {
+	margin-left: 40px;
+	margin-top: 30px;
+}
+
+.lableLogging {
+	margin-left: 35px;
+}
+
+.loggingBtn {
+	margin-top: 20px;
+	margin-left: 118px;
+}
+
+#LogsModal {
+	top: 20%;
+}
+
+.logingModalHeader {
+	background: #404246;
+	color: #fff;
+}
+
+.loggingModalCloseBtn {
+	color: #fff;
+	opacity: 1;
+}
+
+.loggingModalCloseBtn:hover {
+	color: #fff;
+	opacity: 1;
+}
+
+.loggingModalBtn {
+	background-color: #404246;
+}
+
+.loggingModalBtn:hover {
+	background-color: #404246;
+}
+
+.loggingModalBtn:active {
+	background-color: #404246;
+}
+
+.logListUl li {
+	list-style: none;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+
+.modal-dialog {
+	width: 400px;
+}
+
+.status-inactiveLogging {
+	color: #c00;
+}
+
+.optionslist {
+	font-weight: bold;
+}
+
+.status-activeLogging {
+	color: #006400;
+}
+
+.logging_profiling_config .webix_view .webix_ss_header {
+	height: 0px !important;
+}
+
+.loggingProfiling.webix_view {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.logging_profiling_config>div>.webix_ss_header td {
+	border: none !important;
+}
+
+.brix_logo_preview_container {
+	float: left;
+	background-color: #fff;
+	border-bottom: 1px;
+	border-bottom-color: #2e3d54;
+	 height: 40px;
+	margin-right: 13px;
+	padding: 0 10px;
+	margin-bottom: 5px;
+}
+
+.brix_logo_preview_container img {
+	max-height: 30px;
+}
+
+.or-seperator {
+	margin-bottom: 20px;
+	margin-left: 90px;
+	border-bottom: 2px solid #d5d5d5;
+	text-align: center;
+	width: 180px;
+	height: 1em;
+}
+
+.or-seperator>span {
+	display: inline-block;
+	position: relative;
+	bottom: 0;
+	margin-top: 0.5em;
+	line-height: 1;
+	background: #fff;
+	padding: 0 3px;
+}
+
+.looknfeelForm {
+	margin-bottom: 15px;
+	margin-left: 60px;
+}
+
+.titleDiv {
+	border-top: 1px solid #ccc;
+	margin-top: 25px;
+}
+
+img.application-logo.logo-preview {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.logo-preview {
+	background-color: #fff;
+}
+
+#materValue {
+	height: 100%;
+	width: 250px;
+	float: left;
+	clear: both;
+	margin-right: 10px;
+	background-color: #00CC00;
+}
+
+.discriptionEdit {
+	color: #707070;
+	font-size: 12px;
+	line-height: 1.66666666666667;
+	margin: 5px 0 0 97px;
+}
+
+#Audit_paging_here {
+	text-align: right;
+	padding-bottom: 20px;
+}
+
+.auditpagerCss.webix_view button {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #4e8cea !important;
+	background: none !important;
+	border: none !important;
+}
+
+.auditpagerCss.webix_view .webix_pager_item_selected {
+	color: #333 !important;
+}
+
+.auditLogExportBtn {
+	text-align: right;
+	margin-right: 70px;
+	margin-top: -38px;
+	padding-bottom: 15px;
+}
+
+#auditLogSettingModal {
+	top: 50%;
+}
+
+.auditLogsettingModalCss {
+	width: 570px;
+}
+
+.auditLogDescription {
+	padding-left: 109px;
+	padding-top: 4px;
+}
+
+.auditLogForm {
+	margin-left: 30px;
+	margin-top: 10px;
+	font-size: 13px;
+}
+
+.loginModalCss {
+	position: absolute;
+	top: 30%;
+}
+
+.webix_tooltip {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+	background-color: #E9F2FF !important;
+	border: 1px solid #8eaace !important;
+	z-index: 99999999 !important;
+}
+
+.mail_templates_config .webix_ss_header td {
+	border: none !important;
+}
+
+.mail_templates_config.webix_view {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.MailTemplatesBtnCont {
+	border: none;
+	text-align: right;
+	margin-right: 40px;
+}
+
+.mailTemplateBody {
+	float: left;
+	width: 70%;
+	margin-left: 70px;
+}
+
+#systemWordList li {
+	list-style: none;
+	padding-top: 20px;
+}
+
+.MailTemplatesCss.webix_view {
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.webix_popup_text {
+	box-shadow: 0 3px #3B73AF inset !important;
+	font-family: Arial, sans-serif !important;
+	font-size: 14px !important;
+	color: #333 !important;
+}
+
+.webix_popup_button.confirm div, .webix_popup_button div {
+	padding: auto 6px;
+	outline: 0;
+	border-bottom: 1px solid #333 !important;
+	box-shadow: none;
+	text-shadow: none;
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer !important;
+	border: 1px solid #ccc !important;
+	font-size: 14px !important;
+	height: 2.14285714em !important;
+	border-radius: 3.01px !important;
+	line-height: 1.42857143 !important;
+	white-space: nowrap !important;
+}
+
+.brix-form .webix_el_box .webix_img_btn {
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer;
+	border: 1px solid #ccc !important;
+	border-radius: 3.01px !important;
+	line-height: 1.42857143 !important;
+	padding-left: 7px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 14px !important;
+}
+
+.brix_form .webix_inp_label {
+	color: #333 !important;
+	font-size: 13px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-weight: bold !important;
+}
+
+.downloadlogsncss .webixtype_base {
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer;
+	border: 1px solid #ccc !important;
+	border-radius: 3.01px !important;
+	line-height: 1.42857143 !important;
+	padding-left: 7px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 14px !important;
+}
+
+.updateCancelBtn .webixtype_base {
+	background: #f5f5f5 !important;
+	color: #333 !important;
+	cursor: pointer;
+	border: 1px solid #ccc !important;
+	border-radius: 3.01px !important;
+	line-height: 1.42857143 !important;
+	padding-left: 7px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 14px !important;
+}
+
+.logheadercss {
+	border: none !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 20px !important;
+	color: #333 !important;
+	line-height: 1.42857143 !important;
+	font-size: 20px;
+	padding-left: 10px;
+	width: 85% !important;
+}
+
+.downloadbtncss .webix_icon_btn {
+	width: 0px !important;
+}
+
+.downloadIconcss {
+	padding-right: 3px;
+}
+
+.logfilespopup.brix_popup.webix_view .webix_win_head>.webix_view>.webix_template
+	{
+	background: #3B73AF !important;
+	box-shadow: none !important;
+	font-size: 12px;
+	font-weight: bold !important;
+	line-height: 1.666666666667;
+	padding-top: 4px !important;
+}
+
+.logfilespopup.brix_popup .popup_title_css {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #fff !important;
+	font-size: 12px !important;
+}
+
+.logfilespopup.brix_popup.webix_window {
+	border-radius: 6px !important;
+	background: #fff;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	box-shadow: 0px 2px 8px 4px #888888;
+}
+
+.logfilespopup.brix_popup .webix_win_head .webix_view {
+	height: 28px !important;
+}
+
+.loggingModalCss.brix_popup.webix_view .webix_win_head>.webix_view>.webix_template
+	{
+	background: #3B73AF !important;
+	box-shadow: none !important;
+	font-size: 12px;
+	font-weight: bold !important;
+	line-height: 1.666666666667;
+	padding-top: 4px !important;
+	color: #fff !important;
+}
+
+.loggingModalCss.brix_popup .popup_title_css {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #fff !important;
+	font-size: 12px !important;
+}
+
+.loggingModalCss.brix_popup.webix_window {
+	border-radius: 6px !important;
+	background: #fff;
+	border: 1px solid #ccc;
+	overflow: hidden;
+	box-shadow: 0px 2px 8px 4px #888888;
+}
+ */
+/* .loggingModalCss.brix_popup .webix_win_head .webix_view { */
+/* 	height: 28px !important; */
+/* } */
+/* .brixloadercloseicon {
+	float: right;
+	font-weight: bold;
+	right: 16px;
+	position: relative;
+	font-size: 20px;
+	margin-top: -5px;
+	color: #fff !important;
+	cursor: pointer;
+}
+
+.webix_popup_controls .webix_popup_button.confirm>div,
+	.webix_popup_controls .webix_popup_button>div {
+	background: #1D4874 !important;
+	color: #fff !important;
+	line-height: 29px !important;
+}
+
+.webix_modal_box {
+	z-index: 100003 !important;
+	border-radius: 6px !important;
+	background: #f5f5f5 !important;
+	border: 1px solid #ccc !important;
+	overflow: hidden;
+	box-shadow: 0px 2px 8px 4px #888888 !important;
+}
+
+.capslockOnClass {
+	font-weight: 700;
+	margin-top: 6px;
+	color: red;
+	font-size: 14px;
+	margin-left: 15px;
+	display: none;
+}
+
+css by bjayanat for metadata config
+.webix_view.webix_dataview.css_metadata_configuration_list .webix_dataview_item
+	{
+	border-bottom: 0px;
+	border-width: 0px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333 !important;
+	font-size: 14px !important;
+}
+
+.metaconfig_accordion_css .webix_accordionitem_header {
+	background: #ffffff;
+	color: #393434;
+	font-size: 14px;
+	line-height: 16px;
+	height: 15px !important;
+	border-bottom-width: 0px !important;
+	padding-bottom: 21px;
+}
+
+.metaconfig_accordion_css .webix_view.webix_accordionitem.vertical {
+	border-width: 0px !important;
+}
+
+.metaconfig_accordion_css .webix_accordionitem.vertical.collapsed {
+	background: #ffffff;
+	color: #393434;
+	font-size: 14px;
+	line-height: 16px;
+	height: 15px !important;
+	padding-bottom: 10px;
+}
+
+.metaconfig_accordion_css.webix_layout_accordion {
+	height: 17px;
+	background-color: #ffffff !important;
+}
+
+.metaconfig_accordion_css .webix_accordionitem.collapsed .webix_accordionitem_header
+	{
+	background-color: #ffffff;
+	color: #141414;
+}
+
+.metaconfig_accordion_css .webix_accordionitem_body {
+	margin-left: 50px !important;
+}
+
+.metaconfig_accordion_css .webix_accordionitem .webix_accordionitem_button
+	{
+	float: left !important;
+	color: #1e1c1c;
+	margin: 7px 32.5px !important
+}
+
+[aria-label] : after {
+	height: 1px;
+	width: 90%;
+	background: #ddd;
+	border-bottom: 1px solid #ccc;
+	line-height: 0.1em;
+	margin: 20px 10px 10px 25px;
+	z-index: 1;
+}
+
+.metaconfig_accordion_css .webix_accordionitem.collapsed .webix_accordionitem_header .webix_accordionitem_button,
+	.webix_accordionitem.horizontal.collapsed .webix_accordionitem_header .webix_accordionitem_button
+	{
+	color: black;
+	background-color: white !important;
+	border: none;
+}
+
+.metaconfig_accordion_css .webix_accordionitem_label .accordianLableLine
+	{
+	height: 1px;
+	width: 90%;
+	background: #ddd;
+	border-bottom: 2px solid #ccc;
+	line-height: 0.1em;
+	margin: 14px -36px -7px 28px;
+	z-index: 1;
+	text-align: left;
+}
+
+.hideButton {
+	display: none !important;
+}
+
+.labelcss {
+	background-color: white !important;
+	margin-left: -24px;
+	padding: 8px;
+}
+
+.metaconfig_accordion_css .webix_accordionitem.vertical>.webix_accordionitem_header .webix_accordionitem_button:before
+	{
+	content: "\f0d7";
+	color: #ffff !important;
+	background-color: white !important;
+	border: none;
+}
+
+.metaconfig_accordion_css .webix_accordionitem.vertical>.webix_accordionitem_header .webix_accordionitem_button:hover:before
+	{
+	content: "\f0d7";
+	color: #333 !important;
+	background-color: white !important;
+	border: none;
+}
+
+.metaconfig_accordion_css .webix_accordionitem.vertical>.webix_accordionitem_header.collapsed .webix_accordionitem_button:before
+	{
+	content: '\f0da';
+	color: #ffff !important;
+	background-color: white !important;
+	border: none;
+}
+
+.metaconfig_accordion_css .webix_accordionitem.vertical>.webix_accordionitem_header.collapsed .webix_accordionitem_button:hover:before
+	{
+	content: '\f0da';
+	color: #333 !important;
+	background-color: white !important;
+	border: none;
+}
+
+.webix_view.webix_control.webix_el_button.applyButtonCss.webix_disabled_view .webix_disabled
+	{
+	background-color: #fff !important;
+}
+.webix_view.webix_control.webix_el_button.metaconfig_sub_btn_style{
+	margin-left:250px !important;
+}
+.user_personalDet_id, .webix_list {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333 !important;
+}
+
+.user_add_form .webix_section {
+	padding-left: 0px !important;
+}
+
+.css_pswd_policy_pop .webix_template {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #333 !important;
+	font-size: 14px !important;
+}
+
+.loggingModalCss .webix_template {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	color: #fff !important;
+	font-size: 12px !important;
+}
+############ css for report configuration ###########
+.custUpldcss {
+	border: 2px dashed #0087F7 !important;
+	border-radius: 5px;
+	background: white;
+	margin-left: 7px !important;
+}
+
+.textColor {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	line-height: 1.42857143 !important;
+	color: #333 !important;
+}
+
+.cust_drop_file {
+	border: 2px dashed lightblue !important;
+	background-color: transparent;
+	box-sizing: border-box;
+	width: 496px !important;
+	height: 258px !important;
+}
+
+.upldlistcss {
+	border-width: 0px !important;
+	overflow-y: hidden !important;
+}
+
+.dataBrowserFileUploaderHeaderCss {
+	color: #333;
+	padding-top: 0px;
+	 width:241px!important;
+	padding-bottom: 0px;
+	background: #fff;
+	line-height: 0px;
+	font-size: 15px;
+	margin-left: 45px !important;
+	border-bottom: none !important;
+	border: none !important;
+}
+
+.combocss .webix_inp_label {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: #333;
+	padding-left: 40px;
+}
+
+.row {
+	margin-right: -7px !important;
+}
+
+.showModules{
+	display: block!important;
+}
+
+.hideModules{
+	display: none!important;
+}
+.PopupCSS{
+	left: 33% !important;
+	top:33% !important;
+}
+.PopupCSS .webix_inp_label, .webix_inp_top_label, .webix_label_right{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 13px !important;
+    color: #333;
+}
+.PopupCSS .webix_view.webix_toolbar.webix_layout_toolbar{
+	height: 35px !important;
+	background: #3b73af !important;
+}
+.webix_view.webix_control.webix_el_button.buttonCss{
+	margin-top: 0px !important;
+}
+.webix_control button, .webix_control input, .webix_control textarea, .webix_el_label, .webix_inp_bottom_label, .webix_inp_label, .webix_inp_top_label{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+}
+.whiteLabel{
+	margin-top: 0px !important;
+}
+.webix_modal_box .webix_popup_title{
+	color: #f5f5f5;
+    background: #1d4874;
+} */
+.loggingModalCss.webix_view {
+	    margin-top: 12px!important;
+}
+/**
+lobibox
+*/
+.lobibox-notify.lobibox-notify-success {
+    border-color: #000000!important;
+    background-color: #fff !important;
+    color: #008000!important;
+}
+ .lobibox-notify.lobibox-notify-warning {
+    border-color: #000000!important;
+    background-color: #fff !important;
+    color: #ff8000!important;
+}
+.lobibox-notify.lobibox-notify-error {
+    border-color: #000000!important;
+    background-color: #fff !important;
+    color: #ff0000!important;
+}
+.lobibox-notify.lobibox-notify-info {
+    border-color: #000000!important;
+    background-color: #fff !important;
+    color: #000080!important;
+}   
+.webix_window_close {
+	float: right;
+	font-weight: bold;
+	right: 16px;
+	position: relative;
+	font-size: 20px;
+	cursor: pointer;
+	margin-top: -5px;
+	color: #fff;
+}
+.lobibox .lobibox-btn.lobibox-btn-yes {
+    color: #333 !important;
+    background-color: #f5f5f5 !important;
+    border-color: #ccc !important;
+        width: 80px !important ;
+    }
+	.lobibox .lobibox-btn.lobibox-btn-no {
+    color: #333 !important;
+    background-color: #f5f5f5 !important;
+    border-color: #ccc !important;
+    width: 80px !important;
+    }
+.lobibox .lobibox-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    cursor: pointer;
+    border: 1px solid #ccc !important;
+    border-radius: 3.01px !important;
+    line-height: initial;
+      padding-left: 1px!important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+}
+.lobibox.lobibox-confirm .lobibox-header {
+    color: #fff !important;
+    padding-left: 138px !important;
+    background-color: #3B73AF !important;
+}
+.lobibox.lobibox-confirm .lobibox-footer {
+    background-color: #fff !important;
+}
+.lobibox.lobibox-confirm .lobibox-body .lobibox-icon {
+    color: #3B73AF !important;
+    font-size: 45px!important;
+}
+.lobibox.lobibox-confirm{
+    width : 400px!important;
+}
+.lobibox-notify{
+	z-index:1051;
+}
+
+.lobibox.lobibox-success {
+    border: 1px solid #3B73AF!important;
+    width: 450px!important;
+}
+.lobibox.lobibox-success .lobibox-header {
+    color: #eeeeee;
+    background-color: #3B73AF!important;
+}
+.lobibox.lobibox-success .lobibox-footer {
+    background-color: white;
+}
+.lobibox.lobibox-success .lobibox-body .lobibox-icon {
+    color: #3B73AF;
+    font-size: 45px!important;
+}
+.lobibox .lobibox-btn.lobibox-btn-default {
+    border-color: #dadada;
+    color: #333 !important;
+    background-color: #f5f5f5 !important;
+    border-color: #ccc !important;
+    width: 80px!important;
+}
+.lobibox .lobibox-success{
+	width : 400px!important;
+}
+.lobibox.lobibox-warning{
+	width: 450px!important;
+}
+.lobibox.lobibox-warning .lobibox-footer{
+	background-color : white!important;
+}
+.lobibox.lobibox-warning .lobibox-body .lobibox-icon{
+	color :  #ff8000!important;
+}
+.lobibox.lobibox-warning .lobibox-header{
+    background-color: #ff8000 !important;
+}
+
+/**
+Pratiksha Datir
+*/
+::-ms-clear {
+    display: none;
+}
+.webix_sidebar .webix_tree_item.webix_selected, .webix_sidebar .webix_tree_item.webix_selected span {
+    background-color: #BFBFBF!important;
+    padding-right: 0;
+}
+.webix_inp_bottom_label{
+	width : 400px!important;
+}
+.webix_dtable .webix_ss_filter>input ,.webix_dtable .webix_ss_filter>select {
+	margin-top : 8px!important;
+}
+/* .glyphicon {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	font-size: 14px !important;
+} */
+
+.spreadsheet .webix_hcell{
+	font-weight: bold;
+}
+.spreadsheet ,.webix_area_selection_top ,.webix_area_selection_right ,.webix_area_selection_bottom ,.webix_area_selection_left{
+	background-color: grey;
+}
+
+.customTabbar ,.brix_tabbar_1 {
+	display: none; 	
+}
+
+.hideRow {
+	border-bottom-width:0px!important;
+}
+
+.datatableCustomCheckBox .webix_table_checkbox{
+	margin: 12px 30px!important;
+}
+
+.datatableCustomCheckBox ,input[type=checkbox]{
+	margin: 17px 0px 0px 30px;
+} 
+
+.iconAlign .webix_icon_btn{
+	text-align : right!important;
+}
+
+.headerHeight .webix_accordionitem_header{
+	height : 20px!important;
+}
+
+.webix_cal_body .webix_cal_today{
+	border: 1px solid #205080!important;
+}  
+
+.webix_cal_body .webix_cal_select {
+    background: #205080 !important;
+}
+
+.brix_datatable_2 .webix_cell:nth-child(2n){
+/*   background-color:#F5F5F5; */
+  background-color:#e6e6e6
+}
+
+.custom-button{
+	background: #f5f5f5;
+    border: solid 1px #dddddd;
+    padding: 7px;
+    border-radius: 4px;
+}
+
+.rounded-button.brix_button.webix_el_button button {
+	border-radius: 35px !important;
+}
+
+.clicked-button.brix_button.webix_el_button button{
+	background: #3B73AF!important;
+    color: white!important;
+}
+
+.webix_cal_body .webix_cal_event.webix_cal_select, .webix_cal_body .webix_selected {
+	background: #205080 !important;
+}
+
+.webix_cal_footer .webix_cal_done:hover, .webix_time_footer .webix_cal_done{
+	background: #f5f5f5 !important;
+    color: #333 !important;
+    cursor: pointer!important;
+    border: 1px solid #ccc !important;
+    border-radius: 3.01px !important;
+    padding-left: 1px!important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+    width: 100px!important;
+    margin-top : 10px!important;
+    margin-right : 50px!important;
+    padding : 4px!important;
+}
+
+.webix_el_radio .webix_custom_radio:before {
+    background-color: #205080!important;
+}
+
+.brix_radio_button label {
+    font-weight: bold!important;
+}
+
+.operational-email-form{
+	border-width: 0px!important;
+    margin-left: 0px;
+    margin-top: -1px;
+    width: 998px;
+    height: 550px;
+}
+.operational-email-body{
+    width: 962px;
+    height: 265px!important;
+}

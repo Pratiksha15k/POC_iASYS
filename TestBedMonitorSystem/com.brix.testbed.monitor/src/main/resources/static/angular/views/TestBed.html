@@ -1,0 +1,148 @@
+<!--  @author pratiksha.datir -->
+<link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+<link rel="stylesheet" href="./resources/css/alarmViewer.css" type="text/css">
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();  
+});
+$('.nav-tabs a').click(function(){
+	$(this).tab('show');
+});
+</script>
+<div style="position: relative;" class="container-fluid">
+	<div class="row">
+		<div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 1%;">
+			<div class="col-sm-2 col-md-2 col-lg-2">
+				<label style="font-size: 16px;font-weight: 600;margin-right: 12px;">TestBed :</label>
+				<label ng-cloak>{{testBedName}}</label>
+			</div>
+			<div class="col-sm-3 col-md-3 col-lg-3 form-inline" style="padding: 0">
+				<label style="font-size: 16px;font-weight: 600;margin-right: 12px;">Screen :</label>
+				<select class="form-control comboCss" ng-model="selectedScreen"
+					ng-options="screen.id as screen.value for screen in screens" ng-change="getChannelsList()">
+				</select>
+			</div>
+			<div class="col-sm-3 col-md-3 col-lg-3 form-inline" style="padding: 0">
+				<label style="font-size: 16px;font-weight: 600;margin-right: 12px;">Theme :</label>
+				<select class="form-control comboCss" ng-model="selectedTheme" ng-init="setAppliedTheme()"
+					ng-options="theme.id as theme.value for theme in themes" ng-change="setAppliedTheme()">
+				</select>
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<span class="fa fa-clock-o activeAlarm visibleAlarm" data-toggle="modal" data-target="#alarmViewer"
+				data-controls-modal="#alarmViewer" data-backdrop="static" data-keyboard="false"></span>
+			</div>
+			<div class="modal fade in" style="opacity: 0.9;" id="alarmViewer" role="dialog">
+			<div class="modal-dialog modal-lg" style="top: 410px;margin: 25px;width: 95%">
+      			<div class="modal-content">
+        			<div class="modal-header" style="padding: 0.4rem; background-color: #1a7b65;color:white">
+          				<button type="button" class="close" data-dismiss="modal" style="color:white;opacity:1;">&times;</button>
+          				<h5 class="modal-title">Alarm Viewer</h5>
+        			</div>
+        			<div class="modal-body table-responsive" style="height: 25%;">
+						<table class="table table-bordered table-striped alarmtable">
+							<thead>
+								<tr>
+									<th ng-repeat="(key, val) in alarms[0]" ng-if="columnToBeRemoved != $index" ng-cloak>{{key}}</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="row in alarms" ng-class="row.styleClass">
+									<td ng-repeat="column in row" ng-if="columnToBeRemoved != $index" ng-cloak>{{column}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+      			</div>
+    		</div>
+    		</div>
+		</div>
+	</div>
+	<div class="cltrContainer">
+		<div class="row fixedCltrContainer">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<div class="col-sm-2 col-md-2 col-lg-2 fixedCltr">
+					<div class="col-sm-6 col-md-6 col-lg-6 fixedCltrName" ng-cloak>{{fixedChannels[0].name}}</div>
+					<div class="col-sm-6 col-md-6 col-lg-6 fixedCltrValue" ng-cloak>{{fixedChannels[0].value}}</div>
+				</div>
+				<div class="col-sm-2 col-md-2 col-lg-2 fixedCltr">
+					<div class="col-sm-6 col-md-6 col-lg-6 fixedCltrName" ng-cloak>{{fixedChannels[1].name}}</div>
+					<div class="col-sm-6 col-md-6 col-lg-6 fixedCltrValue" ng-cloak>{{fixedChannels[1].value}}</div>
+				</div>
+				<div class="col-sm-2 col-md-2 col-lg-2 fixedCltr">
+					<div class="col-sm-8 col-md-8 col-lg-8 fixedCltrName" ng-cloak>{{fixedChannels[2].name}}</div>
+					<div class="col-sm-4 col-md-4 col-lg-4 fixedCltrValue" ng-cloak>{{fixedChannels[2].value}}</div>
+				</div>
+				<div class="col-sm-4 col-md-4 col-lg-4 fixedCltr">
+					<div class="col-sm-4 col-md-4 col-lg-4 fixedCltrName" ng-cloak>{{fixedChannels[3].name}}</div>
+					<div class="col-sm-8 col-md-8 col-lg-8 fixedCltrValue" ng-cloak>{{fixedChannels[3].value}}</div>
+				</div>
+				<div class="col-sm-2 col-md-2 col-lg-2 fixedCltr">
+					<div class="col-sm-6 col-md-6 col-lg-6 fixedCltrName" ng-cloak>{{fixedChannels[4].name}}</div>
+					<div class="col-sm-6 col-md-6 col-lg-6 fixedCltrValue" ng-cloak>{{fixedChannels[4].value}}</div>
+				</div>
+			</div>
+		</div>
+		<div class="row cltrContainerRow">
+			<div class="col-sm-1 col-md-1 col-lg-1 cltrBlock disableCltrBlockTextSelection" ng-repeat="test in channels | orderBy : 'seqNo'">
+				<div ng-class="test.styleclass" ng-if="test.seqNo > 5">
+					<div ng-cloak data-toggle="tooltip" data-placement="top" ng-attr-title="{{test.name}}">{{test.name | limitTo:16}}
+						<span ng-if="test.name.length > 16">...</span></div>
+					<div>
+						<span ng-cloak>{{test.value}}</span>
+					</div>
+					<div>
+						<span ng-cloak>{{test.note}}</span>
+						<span ng-cloak>{{test.unit}}</span>
+					</div>
+				</div>
+			</div>
+		</div> 		
+	</div>
+	<div class="row panelrow">
+		<div id="logWindow" style="position: relative">
+			<div class="panel panel-default lobipanel lobipanel-sortable panelbody disableCltrBlockTextSelection" id="log">
+				<div class="panel-heading ui-sortable-handle panelheading">
+					<div class="panel-title" style="max-width: calc(100% - 180px);"></div>
+				</div>
+				<div class="panel-body panelcontent">
+					<!-- <script type="text/javascript">
+						$('.nav-tabs a').click(function(){
+					  		$(this).tab('show');
+						});
+					</script> -->
+					<ul class="nav nav-tabs logtabbar">
+    					<li class="active" style="height: 32px;">
+    						<a data-toggle="tab" href="#logmessage" style="height: 32px;">Device Status</a>
+    					</li>
+    					<li style="height: 32px;">
+    						<a data-toggle="tab" href="#alarmmessage" style="height: 32px;">Alarm Status</a>
+    					</li>
+				  	</ul>
+					<div class="tab-content" style="padding-top: 10px;overflow: auto!important;height: 100%;width: 101.3%;">
+    					<div id="logmessage" class="tab-pane active" >
+							<div ng-repeat="log in testBedLog | orderBy : 'seqNo'">
+								<p>
+									<span ng-style="{'font-weight' :log.fontweight}" ng-cloak>{{log.seqNo}}</span>&nbsp;&nbsp;&nbsp;
+									<span ng-class="log.icon" ng-style="{'color':log.iconcolor, 'font-size': '16px'}"></span>&nbsp;&nbsp;&nbsp;
+									<span ng-style="{'color':log.textcolor, 'font-weight' :log.fontweight}" ng-cloak>{{log.value}}</span>
+									<span style="float: right; padding-right: 1%;" ng-cloak>{{log.dateTime}}</span>
+								</p>
+							</div>
+    					</div>
+    					<div id="alarmmessage" class="tab-pane" >
+							<div ng-repeat="log in testBedLog | orderBy : 'seqNo'">
+								<p ng-if="log.icon === 'fa fa-bell'">
+									<span ng-style="{'font-weight' :log.fontweight}" ng-cloak>{{log.seqNo}}</span>&nbsp;&nbsp;&nbsp;
+									<span ng-class="log.icon" ng-style="{'color':log.iconcolor, 'font-size': '16px'}"></span>&nbsp;&nbsp;&nbsp;
+									<span ng-style="{'color':log.textcolor, 'font-weight' :log.fontweight}" ng-cloak>{{log.value}}</span>
+									<span style="float: right; padding-right: 1%;" ng-cloak>{{log.dateTime}}</span>
+								</p>
+							</div>
+    					</div>
+    					</div>
+    				</div>
+				</div>
+			</div>
+		</div>
+</div>

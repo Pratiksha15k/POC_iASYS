@@ -1,0 +1,92 @@
+package com.send.email;
+
+import java.util.Properties;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
+import org.springframework.stereotype.Service;
+
+@Service
+@ConfigurationProperties(prefix = "spring.mail")
+public class JavaMailSenderService extends JavaMailSenderImpl{
+	
+	@Value("${spring.mail.host}")
+	 String host;
+	
+	@Value("${spring.mail.username}")
+	 String username;
+	
+	@Value("${spring.mail.password}")
+	 String password;
+	
+	@Value("${spring.mail.port}")
+	 int port;
+	
+	@Value("${spring.mail.properties.mail.protocol}")
+	 String protocol;
+	
+	@Value("${spring.mail.properties.mail.tls}")
+	 String tls;
+	
+	@Value("${spring.mail.properties.mail.smtp.auth}")
+	 String auth;
+	
+	@Value("${spring.mail.properties.mail.smtp.starttls.enable}")
+	 String startttls;
+	
+	@Value("${spring.mail.properties.mail.smtp.ssl.trust}")
+	 String ssltrust;
+	
+	public  String getTls() {
+		return tls;
+	}
+
+	public  String getAuth() {
+		return auth;
+	}
+
+	public  String getStartttls() {
+		return startttls;
+	}
+
+	public  String getSsltrust() {
+		return ssltrust;
+	}
+	
+	private JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
+
+	public JavaMailSenderService() {
+		javaMailSender.setHost(host);
+		javaMailSender.setPort(port);
+		javaMailSender.setPassword(password);
+		javaMailSender.setUsername(username);
+		javaMailSender.setProtocol(protocol);
+		Properties javaMailProperties = new Properties();
+		javaMailProperties.put("spring.mail.properties.mail.tls", getTls());
+		javaMailProperties.put("spring.mail.properties.mail.smtp.auth", getAuth());
+		javaMailProperties.put("spring.mail.properties.mail.smtp.starttls.enable", getStartttls());
+		javaMailProperties.put("{spring.mail.properties.mail.smtp.ssl.trust", getSsltrust());
+		
+		javaMailSender.setJavaMailProperties(javaMailProperties);
+	}
+	
+    public void sendMail(String toUser, String subject, String body, String toCCUser) {
+
+    	SimpleMailMessage mailMessage = new SimpleMailMessage();
+
+        mailMessage.setTo(toUser);
+
+        mailMessage.setSubject(subject);
+
+        mailMessage.setText(body);
+        
+        mailMessage.setCc(toCCUser);
+
+       // mailMessage.setFrom("johndoe@example.com");
+
+        javaMailSender.send(mailMessage);
+
+    }
+}

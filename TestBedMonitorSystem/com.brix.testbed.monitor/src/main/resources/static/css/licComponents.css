@@ -1,0 +1,48 @@
+/* .webix_hcell {
+	height: 30px !important;
+	line-height: 30px !important;
+}
+
+.webix_ss_vscroll_header {
+	border-radius: 5px 5px 5px 5px !important;
+}
+
+.webix_ss_header {
+	background: #ffffff !important;
+}
+.webix_hcell {
+	height: 30px !important;
+	line-height: 30px !important;
+}
+
+.webix_ss_vscroll_header {
+	border-radius: 5px 5px 5px 5px !important;
+}
+
+.webix_ss_header {
+	background: #ffffff !important;
+}
+
+.webix_hcell, .webix_ss_vscroll_header {
+	background: #205081;
+	color: white;
+	text-align: center;
+} */
+
+.webix_cell:hover {
+	background: #daebfe;
+}
+
+/* .webix_column>div.webix_cell_select, .webix_column>div.webix_column_select, .webix_column>div.webix_row_select ,.webix_cell:hover {
+    color: #fff;
+    background: #205081;
+} */
+/* 
+.webix_hcell, .webix_ss_vscroll_header {
+	background: #205081 !important;
+	color: white !important;
+	text-align: center !important;
+}
+.webix_header>div{
+	background: #ffffff !important;
+} */

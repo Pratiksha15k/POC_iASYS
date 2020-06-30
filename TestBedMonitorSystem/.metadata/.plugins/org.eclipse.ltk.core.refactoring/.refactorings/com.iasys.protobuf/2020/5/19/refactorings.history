@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;com.iasys.protobuf&apos;&#x0D;&#x0A;- Original project: &apos;com.iasys.protobuf&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     RestClient.java.mine&#x0D;&#x0A;     RestClient.java.r10781&#x0D;&#x0A;     RestClient.java.r10809" description="Delete elements" element1="src/main/java/com/brix/testbed/monitor/protobuf/RestClient.java.mine" element2="src/main/java/com/brix/testbed/monitor/protobuf/RestClient.java.r10781" element3="src/main/java/com/brix/testbed/monitor/protobuf/RestClient.java.r10809" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="3" stamp="1588747005703" subPackages="false" version="1.0"/>
+</session>

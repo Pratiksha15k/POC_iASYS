@@ -1,0 +1,107 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.webix_template {
+	padding: 0px !important;
+	margin: 0px !important;
+}
+
+.licSideMenuCss {
+	height: 100% !important;
+	width: 12% !important;
+	border-width: 0px 2px 0px 0px !important;
+	background: #f3f5f9 !important;
+/* 	min-width: 150px!important; */
+}
+.licMainMenuCss{
+	width: 88% !important;
+}
+
+.homedashCss {
+	background-color: #f3f5f9 !important;
+}
+
+.licMainContentCss {
+	height: 100% !important;
+	width: 100% !important;
+	background-color: #fafafa !important;
+	-webkit-box-shadow: inset 26px 9px 54px -48px rgba(0, 0, 0, 0.49);
+	-moz-box-shadow: inset 26px 9px 54px -48px rgba(0, 0, 0, 0.49);
+	box-shadow: inset 26px 9px 54px -48px rgba(0, 0, 0, 0.49);
+/* 	min-width: 800px!important */
+}
+
+.webix_view .webix_scrollview .sidebarMainCss {
+	background-color: #ffffff !important;
+	font-weight: bold !important;
+	margin-top: 10px!important;
+	
+}
+
+.webix_sidebar_expanded .webix_tree_item:hover, .webix_sidebar .webix_tree_item.webix_selected,
+	.webix_sidebar .webix_tree_item.webix_selected span {
+	background-color: #dff1ff !important;
+	color: #205081 !important;
+}
+
+.webix_view .webix_scrollview .dashMainViewCss {
+	background-color: #f3f5f9 !important;
+}
+
+.webix_sidebar .webix_tree_branch_1 {
+	border: none !important;
+}
+
+.panelView {
+	border-radius: 5px !important;
+	-webkit-box-shadow: 7px 11px 41px -25px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 7px 11px 41px -25px rgba(0, 0, 0, 0.35);
+	box-shadow: 7px 11px 41px -25px rgba(0, 0, 0, 0.35);
+}
+.headerBarCss,.webix_layout_toolbar.webix_toolbar{
+background-color:#f3f5f9 !important;	
+border:none !important;
+}
+.webix_layout_toolbar.webix_toolbar .webix_el_label{
+	
+color:darkgrey !important;
+}
+.btn-danger:HOVER {
+cursor: pointer!important;
+}
+.webix_view.webix_layout_accordion {
+    background-color: white!important;
+}
+.heading{
+	font-size: 22px;
+    padding: 15px;
+    margin: 0;
+    padding-left: 32px !important;
+}
+.webix_popup_button.confirm div {
+    font-size: 15px;
+    padding: auto 6px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif!important;
+    border: 1px solid #3498db;
+    outline: 0;
+    background: #1d4874;
+    border: 1px solid #ccc !important;
+    border-radius: 3.01px !important;
+    box-shadow: none;
+    text-shadow: none;
+    color: #fffefe;
+}
+.webix_popup_text {
+    box-shadow: 0 3px #1d4874 inset;
+    font-size: 15px;
+}
+.webix_popup_text {
+    margin: 0 0 5px;
+    padding-top: 25px;
+   color: #333;
+    min-height: 60px;
+}
+.webix_view.webix_range_footer.webix_layout_line .webix_view.webix_control.webix_el_button{
+	display: none!important;
+}

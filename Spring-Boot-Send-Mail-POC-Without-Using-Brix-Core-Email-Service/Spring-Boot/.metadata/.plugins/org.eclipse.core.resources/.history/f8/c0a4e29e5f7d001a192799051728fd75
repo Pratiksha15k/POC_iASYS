@@ -1,0 +1,6 @@
+#Email Configuration Properties
+hostname: iasys-co-in.mail.protection.outlook.com
+user: Apptest@pvmsys.co.in
+password: AApp#pvmsys
+port: 25
+protocol: SMTP		

@@ -1,0 +1,45 @@
+syntax = "proto3";
+//////////////////////////////////////////////////////////
+// BRIX Testbed Channel Values transfer  V1.0.0                                                   
+//                                                                       
+// © by iASYS Technologies., 2020                                                 
+//                                                                       
+// Protobuf structures for the TestBed Channel Values transfer  interface.                                          
+//                                                                       
+//////////////////////////////////////////////////////////
+
+package bean;
+
+option java_package = "com.brix.testbed.monitor.protobuf";
+option java_outer_classname = "TestBedProto";
+
+message Channel {
+	string name = 1;
+	double doubleValue = 2;
+	string strValue = 3;
+	int32 dataType = 4;  
+	string unit = 5;
+    int32  alarmValue = 6;
+	int32  alarmAckflag= 7;
+	int32 seqNo = 8;
+	string displayFormat = 9;
+}
+message Screen {
+	string name = 1;
+	repeated Channel channelList=2;
+}
+
+message TestBed {
+	string name = 1;
+	string hostName=2;
+	repeated Screen screens=3;
+	int32 alarmActive = 4;
+	
+}
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "spring.mail.alloweddomain",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.mail.alloweddomain'"
+  },
+  {
+    "name": "sendEmail.fixedDelay.in.milliseconds",
+    "type": "java.lang.String",
+    "description": "A description for 'sendEmail.fixedDelay.in.milliseconds'"
+  },
+  {
+    "name": "getMail.fixedDelay.in.milliseconds",
+    "type": "java.lang.String",
+    "description": "A description for 'getMail.fixedDelay.in.milliseconds'"
+  },
+  {
+    "name": "sendEmail.initialDelay.in.milliseconds",
+    "type": "java.lang.String",
+    "description": "A description for 'sendEmail.initialDelay.in.milliseconds'"
+  }
+]}

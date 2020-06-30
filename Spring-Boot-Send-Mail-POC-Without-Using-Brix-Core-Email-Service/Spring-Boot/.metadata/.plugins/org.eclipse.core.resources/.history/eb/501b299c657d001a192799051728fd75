@@ -1,0 +1,5 @@
+package com.send.email;
+
+public class SendEmailController {
+
+}
