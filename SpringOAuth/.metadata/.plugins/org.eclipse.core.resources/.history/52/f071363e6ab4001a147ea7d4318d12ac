@@ -1,5 +1,0 @@
-package com.spring.oauth.server;
-
-public class AuthorizationServer  extends AuthorizationServerConfigurerAdapter{
-
-}

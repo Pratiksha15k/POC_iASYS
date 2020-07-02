@@ -1,5 +1,0 @@
-package com.spring.oauth.bean;
-
-public class UserProfile {
-
-}
