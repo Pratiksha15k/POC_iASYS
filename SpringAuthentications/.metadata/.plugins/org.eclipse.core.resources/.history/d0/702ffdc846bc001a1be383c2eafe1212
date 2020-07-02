@@ -1,0 +1,14 @@
+package com.spring.jwt.auth.resource;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ProtectedResource {
+	
+	@RequestMapping(value ="resource")
+	public String getProtectedResource(@RequestParam(value ="authorize", defaultValue="not authorize") String str) {
+		return "You are"+str;
+	}
+}

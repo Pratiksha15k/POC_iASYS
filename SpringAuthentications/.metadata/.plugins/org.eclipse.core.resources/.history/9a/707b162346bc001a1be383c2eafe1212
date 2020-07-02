@@ -1,0 +1,5 @@
+package com.spring.jwt.auth.resource;
+
+public class ProtectedResource {
+
+}
