@@ -34,11 +34,9 @@ public class Auth2Authentication implements EnumWebServiceIF{
 	
 	static long loginTime = 0;
 	
-	static String username = null;
+	static UserDetails userDetails = new UserDetails();
 	
-	static String password = null;
-	
-	static long expirein = 120000;//3 min after login
+	public static final long expirein = 120000;//3 min after login
 	
 	/*********
 	 * Method used to get authorization code for getting access token.
@@ -65,22 +63,27 @@ public class Auth2Authentication implements EnumWebServiceIF{
 				String[] credentials = decodedAuth.split(":");
 				String userName = credentials[0];
 				String pwd = credentials[1];
-				boolean isUserPresent = LoginUtility.getUserPresentOrNot(userName);
-				if (isUserPresent) {
-					loginTime = System.currentTimeMillis();
-					username = userName;
-					password = pwd;
-					reponseHeader = "code";
-					String authcode = RandomStringUtils.randomAlphanumeric(5);
-					reponseHeaderValue = authcode;
-					authCode = authcode;
-					retrunCode = I_REQ_SUCCESS;
-					map.put("code",authcode);
-					result=new Gson().toJson(map);
+				if (LoginUtility.getUserPresentOrNot(userName)) {
+					if(!LoginUtility.isUserDisabled(userName)){
+						userDetails.setUsername(userName);
+						userDetails.setPassword(pwd);
+						loginTime = System.currentTimeMillis();
+						reponseHeader = "code";
+						String authcode = RandomStringUtils.randomAlphanumeric(5);
+						reponseHeaderValue = authcode;
+						authCode = authcode;
+						retrunCode = I_REQ_SUCCESS;
+						map.put("code",authcode);
+						result=new Gson().toJson(map);
+					}else{
+						reponseHeader = "WWW-Authenticate";
+						reponseHeaderValue = "Auth2.0";
+						retrunCode = I_DISABLED;
+					}
 				} else {
 					reponseHeader = "WWW-Authenticate";
 					reponseHeaderValue = "Auth2.0";
-					retrunCode = I_REQ_UNAUTHORIZED;
+					retrunCode = I_NOT_FOUND;
 				}
 			} else {
 				reponseHeader = "WWW-Authenticate";
@@ -120,7 +123,7 @@ public class Auth2Authentication implements EnumWebServiceIF{
 		try{
 			if(code.equalsIgnoreCase(authCode) && grantType.equalsIgnoreCase("authorization_code")){
 				//refreshToken = UUID.randomUUID().toString();
-				sessionKey = LoginUtility.validateUser(username, password);
+				sessionKey = LoginUtility.validateUser(userDetails.getUsername(), userDetails.getPassword());
 				expireintime = new Date(System.currentTimeMillis() + expirein);
 				expireAccessToken();
 				map.put("accessToken", sessionKey);
