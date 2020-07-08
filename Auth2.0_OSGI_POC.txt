@@ -34,6 +34,11 @@ public class Auth2Authentication implements EnumWebServiceIF{
 	
 	static long loginTime = 0;
 	
+	static String username = null;
+	
+	static String password = null;
+	
+	static long expirein = 120000;//3 min after login
 	
 	/*********
 	 * Method used to get authorization code for getting access token.
@@ -60,9 +65,11 @@ public class Auth2Authentication implements EnumWebServiceIF{
 				String[] credentials = decodedAuth.split(":");
 				String userName = credentials[0];
 				String pwd = credentials[1];
-				sessionKey = LoginUtility.validateUser(userName, pwd);
-				if (sessionKey != null && !sessionKey.isEmpty() && sessionKey.length()>0) {
+				boolean isUserPresent = LoginUtility.getUserPresentOrNot(userName);
+				if (isUserPresent) {
 					loginTime = System.currentTimeMillis();
+					username = userName;
+					password = pwd;
 					reponseHeader = "code";
 					String authcode = RandomStringUtils.randomAlphanumeric(5);
 					reponseHeaderValue = authcode;
@@ -105,7 +112,7 @@ public class Auth2Authentication implements EnumWebServiceIF{
 		redirectURL = redirecturl;
 		String tokenType = "bearer";
 		int returnCode=0;
-		Date expirein = null;
+		Date expireintime = null;
 		String result = null;
 		String responseHeader = null;
 		String reponseHeaderValue = null;
@@ -113,12 +120,13 @@ public class Auth2Authentication implements EnumWebServiceIF{
 		try{
 			if(code.equalsIgnoreCase(authCode) && grantType.equalsIgnoreCase("authorization_code")){
 				//refreshToken = UUID.randomUUID().toString();
-				expirein = new Date(System.currentTimeMillis() + 120000);
+				sessionKey = LoginUtility.validateUser(username, password);
+				expireintime = new Date(System.currentTimeMillis() + expirein);
 				expireAccessToken();
 				map.put("accessToken", sessionKey);
 				//map.put("refreshToken", refreshToken);
 				map.put("tokenType", tokenType);
-				map.put("expiresIn", expirein);
+				map.put("expiresIn", expireintime);
 				responseHeader = "accessToken";
 				reponseHeaderValue = sessionKey;
 				returnCode = I_REQ_SUCCESS;
