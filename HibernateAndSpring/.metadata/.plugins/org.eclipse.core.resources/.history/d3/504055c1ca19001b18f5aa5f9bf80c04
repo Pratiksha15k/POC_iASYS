@@ -1,0 +1,51 @@
+package com.hibernate.operations;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+@Table(name="employee")
+public class Employee implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+
+	@Id
+    @Column(name="empid")
+    @GeneratedValue(strategy=GenerationType.AUTO)
+	private int employeeid;
+	
+	@Column(name="empname")
+	private String employeename;
+	
+	@Column(name="empsalary")
+	private int employeesalary;
+
+	public int getEmployeeid() {
+		return employeeid;
+	}
+
+	public void setEmployeeid(int employeeid) {
+		this.employeeid = employeeid;
+	}
+
+	public String getEmployeename() {
+		return employeename;
+	}
+
+	public void setEmployeename(String employeename) {
+		this.employeename = employeename;
+	}
+
+	public int getEmployeesalary() {
+		return employeesalary;
+	}
+
+	public void setEmployeesalary(int employeesalary) {
+		this.employeesalary = employeesalary;
+	}
+	
+}

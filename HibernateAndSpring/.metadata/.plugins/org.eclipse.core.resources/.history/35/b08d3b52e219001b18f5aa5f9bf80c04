@@ -1,0 +1,63 @@
+package com.hibernate.operations;
+
+import org.apache.log4j.Logger;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+
+public class DBOperations {
+	
+	static Session session;
+	static SessionFactory sessionFactory;
+	public final static Logger logger = Logger.getLogger(DBOperations.class);
+	
+	private static SessionFactory buildSessionFactory() {
+		Configuration configuration = new Configuration();
+		configuration.configure("hibernate.cfg.xml");
+		ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
+		sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+		return sessionFactory;
+	}
+
+	public static void createEmployee(String name, int salary) {
+		Employee employee = null;
+		try {
+			employee = new Employee();
+			session = buildSessionFactory().openSession();
+			session.beginTransaction();
+			employee.setEmployeename(name);
+			employee.setEmployeesalary(salary);
+			session.save(employee);
+			session.getTransaction().commit();
+		}catch(Exception e) {
+			logger.error(e.getMessage()+":"+e.getCause());
+		}
+	}
+	
+	public static boolean updateEmployee(int id, String name, int salary, int choice) {
+		Employee employee = null;
+		try {
+			employee = new Employee();
+			session = buildSessionFactory().openSession();
+			session.beginTransaction();
+			/*
+			 * if(choice==1) { Query query =
+			 * session.createQuery("from Employee where empname = :name");
+			 * query.setParameter("name", name); if(query.list() == null ||
+			 * query.list().isEmpty()) { session.getTransaction().commit(); return false; }
+			 * employee.setEmployeeid(id); }else if(choice == 2) { employee =
+			 * (Employee)session.load(Employee.class, id); if(employee == null){
+			 * session.getTransaction().commit(); return false; }
+			 * employee.setEmployeename(name); } employee.setEmployeesalary(salary);
+			 */
+			session.update(employee);
+			session.getTransaction().commit();
+		}catch(Exception e) {
+			logger.error(e.getMessage()+":"+e.getCause());
+		}
+		return true;
+	}
+}
