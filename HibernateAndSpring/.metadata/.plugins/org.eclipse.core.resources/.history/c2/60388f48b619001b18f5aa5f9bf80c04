@@ -1,0 +1,22 @@
+package com.hibernate.operations;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class Employee implements Serializable{
+
+	@Id
+    @Column(name="empid")
+    @GeneratedValue(strategy=GenerationType.AUTO)
+	private int employeeid;
+	
+	private String employeename;
+	
+	private int employeesalary;
+	
+	
+}

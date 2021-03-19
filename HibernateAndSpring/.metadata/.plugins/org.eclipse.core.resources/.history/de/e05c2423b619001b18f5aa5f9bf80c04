@@ -1,0 +1,5 @@
+package com.hibernate.operations;
+
+public class Employee {
+
+}
