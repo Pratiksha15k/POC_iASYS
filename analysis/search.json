@@ -1,0 +1,50 @@
+{
+        "key": "",
+        "description": "",
+	    "noofrows": "4",
+	    "noofcolumns": "3",
+	    "columnwidth": "",
+        "parameter": [{
+            "nodeLabel": "Project",
+			"name": "projectCode",
+			"searchKey": "projectCode",
+			"displayName": "Project",
+			"displayType": "combo",
+			"dx": 1
+        },{
+            "nodeLabel": "TestPlan",
+			"name": "taskName",
+			"searchKey": "taskName",
+			"displayName": "Test Plan",
+			"displayType": "combo",
+			"dx": 1
+        },{
+            "nodeLabel": "EngineSubSystem",
+			"name": "engModel",
+			"searchKey": "engModel",
+			"displayName": "Engine Sub System",
+			"displayType": "combo",
+			"dx": 1
+        },{
+            "nodeLabel": "Project",
+			"name": "modelYear",
+			"searchKey": "modelYear",
+			"displayName": "Model Year",
+			"displayType": "combo",
+			"dx": 1
+        },{
+            "nodeLabel": "SalesCountry",
+			"name": "salesCountry",
+			"searchKey": "salesCountry",
+			"displayName": "Sales Country",
+			"displayType": "combo",
+			"dx": 1
+        },{
+            "nodeLabel": "DataName",
+			"name": "name",
+			"searchKey": "tagNos",
+			"displayName": "Input Tag Number",
+			"displayType": "multiselect",
+			"dx": 1
+        }]
+    }

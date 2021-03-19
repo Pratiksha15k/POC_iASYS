@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css">-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css"/>
+
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+</head>
+<div class="container-fluid">
+<nav class="navbar navbar-default navbar-fixed-top headerToggleBtn" style="min-height:40px;background-color: #205081;">
+    {% include "header.html" %}
+</nav>
+    <div class="row" style="min-height:60px"></div>
+    <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-sm-8 col-md-8 col-lg-8">
+                    <div class="moduleHeader" ng-bind="Application">Analysis Type Selection</div>
+                        <div class="moduleContainer">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12" style="padding: 0;">
+                                    <div ng-if="moduleLength <= 4" class="col-sm-12 col-md-4 col-lg-4 moduleDataContainer" ng-cloak>
+                                        <div class="moduleContent"  style="background-color:#7EB8B9">
+                                            <a href="/analysis/search/tagNoSearch">
+                                                <div class="moduleIcon"><i class="fa fa-clone"></i></div>
+                                                <div class="moduleName" title="Search"><span ng-cloak>Tag Number Combine Case</span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div ng-if="moduleLength <= 4" class="col-sm-12 col-md-4 col-lg-4 moduleDataContainer" ng-cloak>
+                                        <div class="moduleContent"  style="background-color:#91D705">
+                                            <a href="">
+                                                <div class="moduleIcon"><i class="fa fa-file-text-o"></i></div>
+                                                <div class="moduleName" title="Search"><span ng-cloak>Tag Number Separate Case</span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div ng-if="moduleLength <= 4" class="col-sm-12 col-md-4 col-lg-4 moduleDataContainer" ng-cloak>
+                                        <div class="moduleContent"  style="background-color:#F98269">
+                                            <a href="">
+                                                <div class="moduleIcon"><i class="fa fa-database"></i></div>
+                                                <div class="moduleName" title="Search"><span ng-cloak>Data Processing Case</span></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2 col-lg-2" id="rightpane"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</html>

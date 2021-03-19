@@ -1,0 +1,56 @@
+{
+        "key": "",
+        "description": "",
+	    "noofrows": "2",
+	    "noofcolumns": "4",
+	    "columnwidth": "",
+        "parameter": [{
+            "key": "Project",
+			"name": "projectCode",
+			"nodeType": "Project",
+			"displaytype": "richselect",
+			"dx": 1
+        },{
+            "key": "EngineSubSystem",
+			"name": "engModel",
+			"nodeType": "Engine Sub System",
+			"displaytype": "richselect",
+			"dx": 1
+        },{
+            "key": "PowertrainSystem",
+			"name": "ptSystemModel",
+			"nodeType": "PT System Model",
+			"displaytype": "richselect",
+			"dx": 1
+        },{
+            "key": "TestPlan",
+			"name": "testPlanTypeID",
+			"nodeType": "Test Plan Type Id",
+			"displaytype": "richselect",
+			"dx": 1
+        },{
+            "key": "TestPlan",
+			"name": "mspTaskGUID",
+			"nodeType": "MSPTaskGUID",
+			"displaytype": "richselect",
+			"dx": 1
+        },{
+            "key": "SalesCountry",
+			"name": "salesCountry",
+			"nodeType": "Sales Country",
+			"displaytype": "richselect",
+			"dx": 1
+        },{
+            "key": "TestPlan",
+			"name": "taskName",
+			"nodeType": "Task Name",
+			"displaytype": "richselect",
+			"dx": 1
+        },{
+            "key": "description",
+			"name": "description",
+			"nodeType": "Description",
+			"displaytype": "textarea",
+			"dx": 1
+        }]
+    }

@@ -1,0 +1,34 @@
+<head>
+    {% load static %}
+
+    <script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-ui.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.dd.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/loadingoverlay.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/lobibox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/lobiboxes.js' %}"></script>
+    <script>
+        var spinner = {
+			image : "",
+			fontawesome : "fa fa-spinner fa-pulse fa-3x fa-fw",
+			zIndex : 2147483647,
+			fade : false,
+			color : "rgba(0, 0, 0, 0.0)"
+		};
+			$.LoadingOverlay("show", spinner);
+		$(window).bind("load", function() {
+			$.LoadingOverlay("hide", spinner);
+		});
+    </script>
+</head>
+<div class="col-sm-12 col-md-12 col-lg-12" style="margin-top: 0.7%;">
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <span id="application_name" style="color: white;font-size: 16px">Python Analysis Web Application</span>
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4"></div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+        <a href="http://www.iasys.co.in/" target="_blank">
+            <img alt="iasys" src="{% static 'images/BRIX_Logo.png' %}" height="20" width="80"  style="float: right;">
+        </a>
+    </div>
+</div>
