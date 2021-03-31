@@ -1,0 +1,410 @@
+package com.brixip.controller.loader.jobscheduler.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.Callable;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.quartz.JobKey;
+import com.brixIP.brixloader.buss.brixloader.flow.library.common.ResultRO;
+import com.brixip.core.jobinformation.JobInformation;
+import com.brixip.core.jobinformationmanager.JobInformationManager;
+import com.brixip.core.jobscheduler.job.service.JobService;
+import com.brixip.core.library.FilterGroup;
+import com.brixip.core.library.NameValueUnit;
+import com.brixip.core.library.enums.EnumOperator;
+import com.brixip.core.util.BrixCoreUtil;
+import com.brixip.core.util.NameValueConvertUtility;
+import com.pvmsys.brix.core.common.library.ServiceLogger;
+import com.pvmsys.brix.core.session.service.LoginSession;
+import net.sf.json.JSONObject;
+
+public class SystemJobSchedulerServlet extends BaseServlet implements EnumerationIF{
+	/***************
+	 * @author Pratiksha.Datir
+	 */
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+		doPost(req ,resp);
+	}
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+		resp.setContentType("text/html;charset=UTF-8");
+		resp.setCharacterEncoding("UTF-8");
+		req.setCharacterEncoding("UTF-8");
+		HttpSession httpSession = req.getSession();
+		PrintWriter responseWriter = resp.getWriter();
+		JSONObject jsonObject = new JSONObject();
+		try{
+			String sessionKey = (String) req.getParameter("sessionKey");
+			final LoginSession loginSession = getLoginSession(sessionKey, httpSession);
+			if (loginSession == null) {
+				resp.setStatus(403);
+			} else {
+				String requestPath = req.getServletPath();
+				switch(requestPath){
+				case "/scheduleFileCleanupJob":{
+					String formdata = req.getParameter("formData");
+					final List<NameValueUnit> jobnamevalue = NameValueConvertUtility.convertStringToListNameValue(formdata);
+					ResultRO<Map<String, Object>> resultRO = loginSession
+							.execute(new Callable<ResultRO<Map<String, Object>>>() {
+								@Override
+								public ResultRO<Map<String, Object>> call() throws Exception {
+									return doCreateFileCleanupJob(jobnamevalue);
+								}
+							});
+					jsonObject = JSONObject.fromObject(resultRO);
+					break;
+				}
+				case "/scheduleHealthCheckJob":{
+					String formdata = req.getParameter("formData");
+					final List<NameValueUnit> jobnamevalue = NameValueConvertUtility.convertStringToListNameValue(formdata);
+					ResultRO<Map<String, Object>> resultRO = loginSession
+							.execute(new Callable<ResultRO<Map<String, Object>>>() {
+								@Override
+								public ResultRO<Map<String, Object>> call() throws Exception {
+									return doCreateHealthCheckJob(jobnamevalue);
+								}
+							});
+					jsonObject = JSONObject.fromObject(resultRO);
+					break;
+				}
+				case "/scheduleRestConnectionJob":{
+					String formdata = req.getParameter("formData");
+					final List<NameValueUnit> jobnamevalue = NameValueConvertUtility.convertStringToListNameValue(formdata);
+					ResultRO<Map<String, Object>> resultRO = loginSession
+							.execute(new Callable<ResultRO<Map<String, Object>>>() {
+								@Override
+								public ResultRO<Map<String, Object>> call() throws Exception {
+									return doCreateRestConnectionJob(jobnamevalue);
+								}
+							});
+					jsonObject = JSONObject.fromObject(resultRO);
+					break;
+				}
+				case "/scheduleLdapConnectionJob":{
+					String formdata = req.getParameter("formData");
+					final List<NameValueUnit> jobnamevalue = NameValueConvertUtility.convertStringToListNameValue(formdata);
+					ResultRO<Map<String, Object>> resultRO = loginSession
+							.execute(new Callable<ResultRO<Map<String, Object>>>() {
+								@Override
+								public ResultRO<Map<String, Object>> call() throws Exception {
+									return doCreateLdapConnectionJob(jobnamevalue);
+								}
+							});
+					jsonObject = JSONObject.fromObject(resultRO);
+					break;
+				}
+				case "/rescheduleSystemJobs":{
+					String formdata = req.getParameter("formData");
+					final String jobKey = req.getParameter("jobKey");
+					final String jobId = req.getParameter("jobId"); 
+					final List<NameValueUnit> jobnamevalue = NameValueConvertUtility.convertStringToListNameValue(formdata);
+					ResultRO<Map<String, Object>> resultRO = loginSession
+							.execute(new Callable<ResultRO<Map<String, Object>>>() {
+								@Override
+								public ResultRO<Map<String, Object>> call() throws Exception {
+									return doRescheduleSystemJobs(jobnamevalue, jobKey, jobId);
+								}
+							});
+					jsonObject = JSONObject.fromObject(resultRO);
+					break;
+				}
+				case "/getJobParameters":{
+					String jobName = req.getParameter("jobName");
+					ResultRO<Map<String, Object>> resultRO = loginSession
+							.execute(new Callable<ResultRO<Map<String, Object>>>() {
+								@Override
+								public ResultRO<Map<String, Object>> call() throws Exception {
+									return doGetJobParameters(jobName);
+								}
+							});
+					jsonObject = JSONObject.fromObject(resultRO);
+					break;
+				}
+				}
+			}
+			responseWriter.println(jsonObject.toString());
+			responseWriter.close();
+		}catch(Exception e){
+
+		}
+	}
+
+	/************
+	 * This method is used to get job parameters with respective its name.
+	 * @param jobName
+	 * @return {@link ResultRO}
+	 */
+	protected ResultRO<Map<String, Object>> doGetJobParameters(String jobName) {
+		ResultRO<Map<String, Object>> resultRO = new ResultRO<>();
+		JobInformationManager jobInformationManager = null;
+		FilterGroup filterGroup = new FilterGroup();
+		HashMap<String, Object> map = new HashMap<>();
+		try{
+			jobInformationManager = BrixCoreUtil.getService(JobInformationManager.class);
+			filterGroup.addFilter("name", jobName, EnumOperator.CI_EQ);
+			if(jobInformationManager!=null){
+				List<List<NameValueUnit>> ls = jobInformationManager.filterJobInformation(filterGroup, new String[]{"jobParameters"});
+				if(ls!=null && !ls.isEmpty()){
+					for (List<NameValueUnit> list : ls) {
+						NameValueUnit nameValueUnit = 
+								list.stream().filter(x->x.getName().equalsIgnoreCase("jobParameters")).findFirst().orElse(null);
+						if(nameValueUnit!=null){
+							map.put(nameValueUnit.getName(), nameValueUnit.getValue());
+						}
+					}
+					resultRO.setErrorCode(I_SUCCESS);
+					resultRO.setResult(map);
+					resultRO.setMessage("Job Parameters");
+				}else{
+					resultRO.setErrorCode(I_FAILURE);
+					resultRO.setResult(map);
+					resultRO.setMessage("Failed to get Job Parameters");
+				}
+			}
+		}catch(Exception e){
+			resultRO.setErrorCode(I_EXCEPTION);
+			resultRO.setMessage("Problem while getting job parameters :"+e.getMessage()+":"+e.getCause());
+			ServiceLogger.error(e);
+		}
+		return resultRO;
+	}
+
+	
+	protected ResultRO<Map<String, Object>> doRescheduleSystemJobs(List<NameValueUnit> jobnamevalue, String jobKey, String jobId) {
+		ResultRO<Map<String, Object>> resultRO = new ResultRO<>();
+		JobInformationManager jobInformationManager = null;
+		JobInformation jobInformation = null;
+		JobService jobService = null; 
+		try{
+			jobService = BrixCoreUtil.getService(JobService.class);
+			jobInformationManager = BrixCoreUtil.getService(JobInformationManager.class);
+			if(jobService!=null && jobInformationManager!=null){
+				NameValueUnit nameValue1 = jobnamevalue.stream().filter(x->x.getName().equalsIgnoreCase("name")).findFirst().orElse(null);
+				String newJobName = nameValue1.getValue().toString();
+				NameValueUnit nameValue2 = jobnamevalue.stream().filter(x->x.getName().equalsIgnoreCase("oldname")).findFirst().orElse(null);
+				String oldJobName = nameValue2.getValue().toString();
+				if(!oldJobName.equals(newJobName)){
+					jobInformation = jobInformationManager.getJobInformationByName(newJobName);
+				}
+				if(jobInformation == null){
+					JobKey jobKey2 = jobService.updateJob(jobnamevalue, jobId, jobKey);
+					if(jobKey2!=null){
+						resultRO.setErrorCode(I_SUCCESS);
+						resultRO.setMessage("Job updated successfully.");
+					}else{
+						resultRO.setErrorCode(I_FAILURE);
+						resultRO.setMessage("Failed to update job");
+					}
+				}else{
+					resultRO.setErrorCode(I_DUPLICATE);
+					resultRO.setMessage("Job already exist");
+				}
+			}
+		}catch(Exception e){
+			resultRO.setErrorCode(I_EXCEPTION);
+			resultRO.setMessage("Problem while updating health check job:"+e.getMessage()+":"+e.getCause());
+		}
+		return resultRO;
+	}
+
+	/****
+	 * This method is used to create ldap connection checking job.
+	 * @param jobnamevalue
+	 * @return {@link ResultRO}
+	 */
+	protected ResultRO<Map<String, Object>> doCreateLdapConnectionJob(List<NameValueUnit> jobnamevalue) {
+		ResultRO<Map<String, Object>> resultRO = new ResultRO<>();
+		JobInformationManager jobInformationManager = null;
+		JobService jobService = null;
+		try{
+			jobInformationManager = BrixCoreUtil.getService(JobInformationManager.class);
+			jobService = BrixCoreUtil.getService(JobService.class);
+			if(jobService != null && jobInformationManager!=null){
+				NameValueUnit nameValue = jobnamevalue.stream().filter(x->x.getName().equalsIgnoreCase("name")).findFirst().orElse(null);
+				if(nameValue != null){
+					String jobName = (String)nameValue.getValue();
+					JobInformation jobInformation = jobInformationManager.getJobInformationByName(jobName);
+					if(jobInformation == null){
+						if(jobnamevalue!=null && !jobnamevalue.isEmpty()){
+							jobnamevalue.add(new NameValueUnit("jobJarName", "com.brixip.controller.loader.jobscheduler"));
+							jobnamevalue.add(new NameValueUnit("jobClassName", "com.brixip.controller.loader.jobscheduler.systemjobs.CheckLDAPConnection"));
+						}
+						JobKey jobKey = jobService.createJob(jobnamevalue, true);
+						if(jobKey!=null){
+							Map<String, Object> jobMap =  new HashMap<>();
+							jobMap.put("jobGroup", jobKey.getGroup().toString());
+							jobMap.put("jobName", jobKey.getName().toString());
+							resultRO.setResult(jobMap);
+							resultRO.setErrorCode(I_SUCCESS);
+							resultRO.setMessage("Job is scheduled ");
+						}else{
+							resultRO.setErrorCode(I_FAILURE);
+							resultRO.setMessage("Failed to schedule job");
+						}
+					}else{
+						resultRO.setErrorCode(I_DUPLICATE);
+						resultRO.setMessage("Job is already exist");
+					}
+				}
+			}
+		}catch(Exception e){
+			resultRO.setErrorCode(I_EXCEPTION);
+			resultRO.setMessage("Problem while creating Health Check job"+e.getMessage()+":"+e.getCause());
+			ServiceLogger.error(e);
+		}
+		return resultRO;
+	}
+
+	/***************
+	 * This method is used to create rest connection checking job.
+	 * @param jobnamevalue
+	 * @return {@link ResultRO}
+	 */
+	protected ResultRO<Map<String, Object>> doCreateRestConnectionJob(List<NameValueUnit> jobnamevalue) {
+		ResultRO<Map<String, Object>> resultRO = new ResultRO<>();
+		JobInformationManager jobInformationManager = null;
+		JobService jobService = null;
+		try{
+			jobInformationManager = BrixCoreUtil.getService(JobInformationManager.class);
+			jobService = BrixCoreUtil.getService(JobService.class);
+			if(jobService != null && jobInformationManager!=null){
+				NameValueUnit nameValue = jobnamevalue.stream().filter(x->x.getName().equalsIgnoreCase("name")).findFirst().orElse(null);
+				if(nameValue != null){
+					String jobName = (String)nameValue.getValue();
+					JobInformation jobInformation = jobInformationManager.getJobInformationByName(jobName);
+					if(jobInformation == null){
+						if(jobnamevalue!=null && !jobnamevalue.isEmpty()){
+							jobnamevalue.add(new NameValueUnit("jobJarName", "com.brixip.controller.loader.jobscheduler"));
+							jobnamevalue.add(new NameValueUnit("jobClassName", "com.brixip.controller.loader.jobscheduler.systemjobs.CheckRestConnection"));
+						}
+						JobKey jobKey = jobService.createJob(jobnamevalue, true);
+						if(jobKey!=null){
+							Map<String, Object> jobMap =  new HashMap<>();
+							jobMap.put("jobGroup", jobKey.getGroup().toString());
+							jobMap.put("jobName", jobKey.getName().toString());
+							resultRO.setResult(jobMap);
+							resultRO.setErrorCode(I_SUCCESS);
+							resultRO.setMessage("Job is scheduled ");
+						}else{
+							resultRO.setErrorCode(I_FAILURE);
+							resultRO.setMessage("Failed to schedule job");
+						}
+					}else{
+						resultRO.setErrorCode(I_DUPLICATE);
+						resultRO.setMessage("Job already exist");
+					}
+				}
+			}
+		}catch(Exception e){
+			resultRO.setErrorCode(I_EXCEPTION);
+			resultRO.setMessage("Problem while creating Rest Connection job"+e.getMessage()+":"+e.getCause());
+			ServiceLogger.error(e);
+		}
+		return resultRO;
+	}
+
+	/**************
+	 * This method is used to create health check job.
+	 * @param jobnamevalue
+	 * @return {@link ResultRO}
+	 */
+	protected ResultRO<Map<String, Object>> doCreateHealthCheckJob(List<NameValueUnit> jobnamevalue) {
+		ResultRO<Map<String, Object>> resultRO = new ResultRO<>();
+		JobInformationManager jobInformationManager = null;
+		JobService jobService = null;
+		try{
+			jobInformationManager = BrixCoreUtil.getService(JobInformationManager.class);
+			jobService = BrixCoreUtil.getService(JobService.class);
+			if(jobService != null && jobInformationManager!=null){
+				NameValueUnit nameValue = jobnamevalue.stream().filter(x->x.getName().equalsIgnoreCase("name")).findFirst().orElse(null);
+				if(nameValue != null){
+					String jobName = (String)nameValue.getValue();
+					JobInformation jobInformation = jobInformationManager.getJobInformationByName(jobName);
+					if(jobInformation == null){
+						if(jobnamevalue!=null && !jobnamevalue.isEmpty()){
+							jobnamevalue.add(new NameValueUnit("jobJarName", "com.brixip.controller.loader.jobscheduler"));
+							jobnamevalue.add(new NameValueUnit("jobClassName", "com.brixip.controller.loader.jobscheduler.systemjobs.HealthCheck"));
+						}
+						JobKey jobKey = jobService.createJob(jobnamevalue, true);
+						if(jobKey!=null){
+							Map<String, Object> jobMap =  new HashMap<>();
+							jobMap.put("jobGroup", jobKey.getGroup().toString());
+							jobMap.put("jobName", jobKey.getName().toString());
+							resultRO.setResult(jobMap);
+							resultRO.setErrorCode(I_SUCCESS);
+							resultRO.setMessage("Job is scheduled ");
+						}else{
+							resultRO.setErrorCode(I_FAILURE);
+							resultRO.setMessage("Failed to schedule job");
+							resultRO.setResult(null);
+						}
+					}else{
+						resultRO.setErrorCode(I_DUPLICATE);
+						resultRO.setMessage("Job is already exist");
+					}
+				}
+			}
+		}catch(Exception e){
+			resultRO.setErrorCode(I_EXCEPTION);
+			resultRO.setMessage("Problem while creating Health Check job"+e.getMessage()+":"+e.getCause());
+			ServiceLogger.error(e);
+		}
+		return resultRO;
+	}
+
+	/**********.
+	 * This method is used to create file cleanup job.
+	 * @param jobnamevalue
+	 * @return {@link ResultRO}
+	 */
+	protected ResultRO<Map<String, Object>> doCreateFileCleanupJob(List<NameValueUnit> jobnamevalue) {
+		ResultRO<Map<String, Object>> resultRO = new ResultRO<>();
+		JobInformationManager jobInformationManager = null;
+		JobService jobService = null;
+		try{
+			jobInformationManager = BrixCoreUtil.getService(JobInformationManager.class);
+			jobService = BrixCoreUtil.getService(JobService.class);
+			if(jobService!=null && jobInformationManager!=null){
+				NameValueUnit nameValue = jobnamevalue.stream().filter(x->x.getName().equalsIgnoreCase("name")).findFirst().orElse(null);
+				if(nameValue != null){
+					String jobName = (String)nameValue.getValue();
+					JobInformation jobInformation = jobInformationManager.getJobInformationByName(jobName);
+					if(jobInformation == null){
+						if(jobnamevalue!=null && !jobnamevalue.isEmpty()){
+							jobnamevalue.add(new NameValueUnit("jobJarName", "com.brixip.controller.loader.jobscheduler"));
+							jobnamevalue.add(new NameValueUnit("jobClassName", "com.brixip.controller.loader.jobscheduler.systemjobs.FileCleanup"));
+						}
+						JobKey jobKey = jobService.createJob(jobnamevalue, true);
+						if(jobKey!=null){
+							Map<String, Object> jobMap =  new HashMap<>();
+							jobMap.put("jobGroup", jobKey.getGroup().toString());
+							jobMap.put("jobName", jobKey.getName().toString());
+							resultRO.setResult(jobMap);
+							resultRO.setErrorCode(I_SUCCESS);
+							resultRO.setMessage("Job is scheduled ");
+						}else{
+							resultRO.setErrorCode(I_FAILURE);
+							resultRO.setMessage("Failed to schedule job");
+						}
+					}else{
+						resultRO.setErrorCode(I_DUPLICATE);
+						resultRO.setMessage("Job is already exist");
+					}
+				}
+			}
+		}catch(Exception e){
+			resultRO.setErrorCode(I_EXCEPTION);
+			resultRO.setMessage("Problem while creating File Cleanup job"+e.getMessage()+":"+e.getCause());
+			ServiceLogger.error(e);
+		}
+		return resultRO;
+	}
+}

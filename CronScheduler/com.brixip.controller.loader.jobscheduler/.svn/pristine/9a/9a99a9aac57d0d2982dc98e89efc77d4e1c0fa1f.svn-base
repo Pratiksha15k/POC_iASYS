@@ -1,0 +1,6 @@
+output.. = classes/
+bin.includes = META-INF/,\
+               .,\
+               OSGI-INF/QuartzScheduler.xml,\
+               OSGI-INF/JobsScheduler.xml
+source.. = src/main/java/

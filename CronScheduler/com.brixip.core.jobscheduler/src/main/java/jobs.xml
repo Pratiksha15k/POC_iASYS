@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<job-scheduling-data xmlns="http://www.quartz-scheduler.org/xml/JobSchedulingData" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.8" xsi:schemaLocation="http://www.quartz-scheduler.org/xml/JobSchedulingData http://www.quartz-scheduler.org/xml/job_scheduling_data_1_8.xsd">
+
+    <schedule>
+        <job>
+            <name>my-very-clever-job</name>
+            <group>MYJOB_GROUP</group>
+
+            <description>The job description</description>
+            <job-class>org.ischeduler.core.jobs.CleverJob</job-class>
+          
+        </job>
+
+        <trigger>
+            <cron>
+                <name>my-trigger</name>
+                <group>MYTRIGGER_GROUP</group>
+                <job-name>my-very-clever-job</job-name>
+
+                <job-group>MYJOB_GROUP</job-group>
+                <cron-expression>00/1 * 1/1 * ? *</cron-expression>
+
+            </cron>
+        </trigger>
+		
+
+
+</schedule>
+</job-scheduling-data>

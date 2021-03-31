@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="com.brixip.core.jobscheduler">
+   <implementation class="com.brixip.core.jobscheduler.job.provider.JobServiceImpl"/>
+   <reference cardinality="1..1" interface="com.brixip.core.jobscheduler.job.jobscheduler.JobScheduler" name="JobScheduler" policy="static"/>
+   <service>
+      <provide interface="com.brixip.core.jobscheduler.job.service.JobService"/>
+   </service>
+</scr:component>
